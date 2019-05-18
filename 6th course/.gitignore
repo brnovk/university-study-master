@@ -1,0 +1,12 @@
+# MS Office temp files #
+~*.doc*
+
+# Netbeans - files/catalogs of project #
+*.class
+build/
+conf/
+dist/
+nbproject/private/
+lib/CopyLibs/
+lib/javaee-endorsed-api-6.0/
+lib/nblibraries.properties

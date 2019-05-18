@@ -1,0 +1,157 @@
+
+.left-offset {
+	float: left;
+}
+
+.right-offset {
+	float: right;
+}
+
+.clearfix:after {
+   content: " ";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+.actionButton {
+	width: 150px;
+	height: 30px;
+	margin: 0 5px;
+}
+
+.topPanelTable {
+	margin: 10px 3px 2px;
+}
+
+.leftPanelTable {
+	margin: 3px 3px 0 2px;
+}
+
+.gameTable {
+	margin: 3px 2px 0 2px;
+}
+
+.gameTable,
+.gameTable th,
+.gameTable td,
+.topPanelTable,
+.topPanelTable td,
+.leftPanelTable,
+.leftPanelTable td {
+	border: 1px solid #ccc;
+	border-collapse: collapse;
+	font-size: 11px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.gameTable td.active {
+	background-color: orange;
+}
+
+.gameTable td:hover {
+	cursor: pointer;
+}
+
+.tablesContainer {
+	width: 912px;
+	padding: 10px 0;
+}
+
+body {
+	margin: 0;
+}
+
+td {
+	padding: 0;
+	width: 14px;
+	height: 14px;
+}
+
+.question-block {
+	width: 282px;
+	height: 30px;
+	color: #1684ca;
+	font-weight: bold;
+	font-size: 13px;
+	padding: 0;
+}
+
+.menu-container {
+	height: 88px;
+	background-color: #293946;
+}
+
+.main-container {
+    margin: 0 auto;
+    width: 912px;
+	
+}
+
+.left-jump {
+	width: 70px;
+	border-right: 1px solid #6E8492;
+	height: 100%;
+	text-align: center;
+	font-size: 50px;
+	font-weight: bold;
+}
+
+.right-jump {
+	width: 70px;
+	border-left: 1px solid #6E8492;
+	height: 100%;
+	text-align: center;
+	font-size: 50px;
+	font-weight: bold;
+}
+
+.right-jump a,
+.left-jump a {
+	display: block;
+	margin: 15px;
+	text-decoration: none;
+}
+
+.right-jump a,
+.right-jump a:visited,
+.right-jump a:active,
+.left-jump a,
+.left-jump a:visited,
+.left-jump a:active {
+	color: #009A28;
+}
+
+.descpiption-block {
+	margin: 1px 5px 0 5px;
+	height: 87px;
+	padding: 0 5px;
+	line-height: 17px;
+	border-right: 1px solid #6E8492;
+	color: #ccc;
+}
+
+.descpiption-block em {
+	color: #D5B970;
+}
+
+.descpiption-block strong {
+	color: #009A28;
+}
+
+.task-block {
+	margin: 1px 5px 0 5px;
+	padding: 0 5px;
+	line-height: 17px;
+	color: #ccc;
+}
+
+.visible {
+	display: block;
+}
+
+.invisible {
+	display: none;
+}

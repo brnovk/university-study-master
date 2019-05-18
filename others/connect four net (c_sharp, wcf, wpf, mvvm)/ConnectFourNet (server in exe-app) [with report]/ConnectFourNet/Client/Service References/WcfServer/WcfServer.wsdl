@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WcfServer" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:18235/WCFServer.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:18235/WCFServer.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:18235/WCFServer.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ConnectNNet.Server.Models" />
+      <xsd:import schemaLocation="http://localhost:18235/WCFServer.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ConnectNNet.GameCore" />
+      <xsd:import schemaLocation="http://localhost:18235/WCFServer.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/ConnectNNet.GameCore.Models" />
+      <xsd:import schemaLocation="http://localhost:18235/WCFServer.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/ConnectNNet.GameCore.Models.Players" />
+      <xsd:import schemaLocation="http://localhost:18235/WCFServer.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/System.Drawing" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServer_Start_InputMessage">
+    <wsdl:part name="parameters" element="tns:Start" />
+  </wsdl:message>
+  <wsdl:message name="IServer_Start_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServer_ReStart_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReStart" />
+  </wsdl:message>
+  <wsdl:message name="IServer_ReStart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReStartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServer_Stop_InputMessage">
+    <wsdl:part name="parameters" element="tns:Stop" />
+  </wsdl:message>
+  <wsdl:message name="IServer_Stop_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StopResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServer_GetGameSession_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGameSession" />
+  </wsdl:message>
+  <wsdl:message name="IServer_GetGameSession_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGameSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServer_GetState_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetState" />
+  </wsdl:message>
+  <wsdl:message name="IServer_GetState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServer_Turn_InputMessage">
+    <wsdl:part name="parameters" element="tns:Turn" />
+  </wsdl:message>
+  <wsdl:message name="IServer_Turn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TurnResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServer_GetDownPos_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDownPos" />
+  </wsdl:message>
+  <wsdl:message name="IServer_GetDownPos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDownPosResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServer">
+    <wsdl:operation name="Start">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServer/Start" message="tns:IServer_Start_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServer/StartResponse" message="tns:IServer_Start_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReStart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServer/ReStart" message="tns:IServer_ReStart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServer/ReStartResponse" message="tns:IServer_ReStart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Stop">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServer/Stop" message="tns:IServer_Stop_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServer/StopResponse" message="tns:IServer_Stop_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGameSession">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServer/GetGameSession" message="tns:IServer_GetGameSession_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServer/GetGameSessionResponse" message="tns:IServer_GetGameSession_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetState">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServer/GetState" message="tns:IServer_GetState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServer/GetStateResponse" message="tns:IServer_GetState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Turn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServer/Turn" message="tns:IServer_Turn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServer/TurnResponse" message="tns:IServer_Turn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDownPos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServer/GetDownPos" message="tns:IServer_GetDownPos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServer/GetDownPosResponse" message="tns:IServer_GetDownPos_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServer" type="tns:IServer">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Start">
+      <soap:operation soapAction="http://tempuri.org/IServer/Start" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReStart">
+      <soap:operation soapAction="http://tempuri.org/IServer/ReStart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Stop">
+      <soap:operation soapAction="http://tempuri.org/IServer/Stop" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGameSession">
+      <soap:operation soapAction="http://tempuri.org/IServer/GetGameSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetState">
+      <soap:operation soapAction="http://tempuri.org/IServer/GetState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Turn">
+      <soap:operation soapAction="http://tempuri.org/IServer/Turn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDownPos">
+      <soap:operation soapAction="http://tempuri.org/IServer/GetDownPos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WcfServer">
+    <wsdl:port name="BasicHttpBinding_IServer" binding="tns:BasicHttpBinding_IServer">
+      <soap:address location="http://localhost:18235/WCFServer.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

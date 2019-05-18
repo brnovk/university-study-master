@@ -1,0 +1,9 @@
+<publishData>
+  <publishProfile
+    publishUrl="https://i1708381-001-site1.atempurl.com:8172/msdeploy.axd"
+    msdeploySite="i1708381-001-site1"
+    destinationAppUrl="http://i1708381-001-site1.atempurl.com/"
+    profileName="Default Settings"
+    publishMethod="MSDeploy"
+    userName="ifc\i1708381-001" />
+</publishData>

@@ -1,0 +1,13 @@
+# Концепция единой точки входа: все запросы отправляемые пользователями перенаправляются в один файл,
+# который в свою очередь занимается обработкой этих запросов, и возвращает результат обработки запроса.
+
+# При любом запросе (строчка ^(.*)$) идет перенаправление на index.php
+# Вся строка, идущая после домена, записывается в переменную $_GET[‘filename’]:
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php?filename=$1 [L,QSA]
+</IfModule>

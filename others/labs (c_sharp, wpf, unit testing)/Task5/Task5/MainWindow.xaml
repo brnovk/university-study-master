@@ -1,0 +1,151 @@
+﻿<Window x:Class="Task5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Task5"
+        mc:Ignorable="d"
+        Title="Задание 5"
+        Height="320"
+        MinHeight="320"
+        Width="490"
+        MinWidth="490"
+        Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"
+        FontFamily="Consolas">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top"
+              Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+            <MenuItem x:Name="menuAboutButton" 
+                      Header="_Задание"
+                      Cursor="Hand"
+                      Click="menuAboutButton_Click"/>
+        </Menu>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Label x:Name="sideALabel" 
+                   Content="A" 
+                   HorizontalAlignment="Center" 
+                   Margin="5" 
+                   VerticalAlignment="Bottom"/>
+
+            <Label x:Name="sideBLabel" 
+                   Content="B" 
+                   Grid.Column="1" 
+                   HorizontalAlignment="Center" 
+                   Margin="5" 
+                   VerticalAlignment="Bottom"/>
+
+            <Label x:Name="sideCLabel" 
+                   Content="C" 
+                   Grid.Column="2" 
+                   HorizontalAlignment="Center" 
+                   Margin="5" 
+                   VerticalAlignment="Bottom"/>
+
+            <TextBox x:Name="sideATextBox" 
+                     HorizontalAlignment="Stretch" 
+                     Margin="5" 
+                     Grid.Row="1" 
+                     TextWrapping="NoWrap" 
+                     Text="45.0" 
+                     VerticalAlignment="Stretch" 
+                     VerticalContentAlignment="Center" 
+                     HorizontalContentAlignment="Center" 
+                     HorizontalScrollBarVisibility="Auto" 
+                     FontSize="16"/>
+
+            <TextBox x:Name="sideBTextBox" 
+                     Grid.Column="1" 
+                     HorizontalAlignment="Stretch" 
+                     Margin="5" 
+                     Grid.Row="1" 
+                     TextWrapping="NoWrap" 
+                     Text="42.00001" 
+                     VerticalAlignment="Stretch" 
+                     VerticalContentAlignment="Center" 
+                     HorizontalContentAlignment="Center"  
+                     HorizontalScrollBarVisibility="Auto" 
+                     FontSize="16"/>
+
+            <TextBox x:Name="sideCTextBox" 
+                     Grid.Column="2" 
+                     HorizontalAlignment="Stretch" 
+                     Margin="5" 
+                     Grid.Row="1" 
+                     TextWrapping="NoWrap" 
+                     Text="3.0" 
+                     VerticalAlignment="Stretch" 
+                     VerticalContentAlignment="Center" 
+                     HorizontalContentAlignment="Center"  
+                     HorizontalScrollBarVisibility="Auto" 
+                     FontSize="16"/>
+
+            <Button x:Name="triangleExistButton" 
+                    Content="Проверить стороны на возможность существования треугольника" 
+                    HorizontalAlignment="Stretch" 
+                    Margin="5" 
+                    Grid.Row="2" 
+                    VerticalAlignment="Stretch" 
+                    Grid.ColumnSpan="3" 
+                    Cursor="Hand"
+                    Click="triangleExistButton_Click"/>
+
+            <Button x:Name="calculatePerimeterButton" 
+                    Content="Вычислить периметр" 
+                    HorizontalAlignment="Stretch" 
+                    Margin="5" 
+                    Grid.Row="3" 
+                    VerticalAlignment="Stretch" 
+                    Cursor="Hand"
+                    Click="calculatePerimeterButton_Click"/>
+
+            <TextBox x:Name="resultPerimeterTextBox" 
+                     Grid.Column="1" 
+                     HorizontalAlignment="Stretch" 
+                     Margin="5" 
+                     Grid.Row="3" 
+                     TextWrapping="NoWrap" 
+                     VerticalAlignment="Stretch" 
+                     VerticalContentAlignment="Center" 
+                     HorizontalContentAlignment="Center" 
+                     FontSize="16" 
+                     Grid.ColumnSpan="2" 
+                     IsReadOnly="True"/>
+
+            <Button x:Name="calculateAreaButton" 
+                    Content="Вычислить площадь" 
+                    HorizontalAlignment="Stretch" 
+                    Margin="5" 
+                    Grid.Row="4" 
+                    VerticalAlignment="Stretch" 
+                    Cursor="Hand"
+                    Click="calculateAreaButton_Click"/>
+
+            <TextBox x:Name="resultAreaTextBox" 
+                     Grid.Column="1" 
+                     HorizontalAlignment="Stretch" 
+                     Margin="5" 
+                     Grid.Row="4" 
+                     TextWrapping="NoWrap" 
+                     VerticalAlignment="Stretch" 
+                     VerticalContentAlignment="Center" 
+                     HorizontalContentAlignment="Center" 
+                     FontSize="16" 
+                     Grid.ColumnSpan="2" 
+                     IsReadOnly="True"/>
+
+        </Grid>
+    </DockPanel>
+</Window>

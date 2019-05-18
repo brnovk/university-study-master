@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Лабораторная №4</title>
+	<script src="script.js" type="text/javascript" charset="utf-8" async defer>
+	</script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body onload="ininialize();">
+
+	<div class="main-container">
+		<div class="menu-container clearfix">
+			<div class="left-jump left-offset">
+				<a href="../lab3/lab3.html" title="Переход к лабораторной №3">&lt;</a>
+			</div>
+			<div class="menu-content left-offset">
+				<div class="descpiption-block left-offset">
+					<strong>
+						Лабораторная работа №4
+					</strong><br>
+					<span>
+						<em>Группа:</em> ПОИТ-61
+					</span><br>
+					<span>
+						<em>Вариант:</em> 4
+					</span><br>
+					<span>
+						<em>ФИО:</em> Баранов В.Ф.
+					</span>
+				</div>
+				<div class="task-block right-offset">
+					В анкете заполняется информация о десяти сотрудниках: фамилия, дата<br>
+					заключения контракта и срок (в годах). Создайте форму для ввода данных.<br>
+					Вычислить: даты окончания контрактов; сотрудников, контракт c которыми<br>
+					заканчивается в указанном году; сотрудников, контракт с которыми <br>
+					заканчивается в 1 квартале.
+				</div>
+			</div>
+			<div class="right-jump right-offset">
+				<a href="../lab5/lab5.html" title="Переход к лабораторной №5">&gt;</a>
+			</div>
+		</div>
+	
+		<ul class="menu-list">
+			<li id="idAllEmployees" onclick="allEmployees();" class="active">Все контракты сотрудников</li>
+			<li id="idAddContract" onclick="addContract();">Добавить контракт</li>
+			<li id="idCalcDates" onclick="calcDateEndingContract();">Вычислить даты окончания контрактов</li>
+			<li id="idByYear" onclick="employeesByYearEnding();">Выбрать сотрудников по году окончания контракта</li>
+			<li id="idBy1st" onclick="employeesBy1stQEnding();">Выбрать сотрудников с оканчивающимися в 1 квартале контрактами</li>
+		</ul><!-- menu-list -->
+
+		<div id="all-employees" class="visible">
+			<h3 class="din-label">
+				Контракты всех сотрудников.
+			</h3>
+		</div>
+		
+		<div id="add-contract" class="invisible">
+			<h3 class="din-label">
+				Добавление контракта в список.
+			</h3>
+			<form class="form-addind-contract" accept-charset="utf-8" 
+					onsubmit="return performSubmitAdd();" method="post">
+
+				<label for="idSurnameInAddForm">Фамилия сотрудника:</label>
+				<input id="idSurnameInAddForm" 
+						type="text" 
+						name="surname" 
+						value="" 
+						placeholder="Фамилия сотрудника"
+						required><br>
+				<label for="idDateInAddForm">Дата заключения контракта:</label>
+				<input id="idDateInAddForm" 
+						type="date" 
+						name="date-conclusion-contract" 
+						value="" 
+						placeholder="yyyy-mm-dd (1999-01-31)"
+						required><br>
+				<label for="idDurationInAddForm">Длительность контракта (лет):</label>
+				<input id="idDurationInAddForm" 
+						type="number" 
+						name="duration-contract" 
+						min="1" 
+						max="5" 
+						value="1" 
+						placeholder="Длительность контракта"
+						required><br>
+				<input type="submit" name="submitButton" value="Отправить">
+			</form><!--form-addind-contract-->
+		</div>
+
+		<div id="ending-contract-table" class="invisible">
+			<h3 class="din-label">
+				Таблица окончания контрактов сотрудников.
+			</h3>
+		</div>
+
+		<div id="ending-contract-by-year-1" class="invisible">
+			<h3 class="din-label">
+				Выброрка списка сотрудников по году окончания контракта.
+			</h3>
+			<form id="form-input-date-id" class="form-input-date" accept-charset="utf-8" method="post" onsubmit="return performSubmitQuery();">
+				<label for="idYearInQueryForm">Введите год окончания контракта: </label>
+				<input id="idYearInQueryForm" 
+						type="number" 
+						name="ending-year"
+						min="1990" 
+						max="2100" 
+						value="2015"
+						placeholder="Год окончания контракта"
+						required><br>
+				<input type="submit" name="queryButton" value="Выбрать сотрудников">
+			</form><!--form-input-date-->
+		</div>
+
+		<div id="ending-contract-by-year-2" class="invisible">
+			<h3 class="din-label">
+				Выброрка списка сотрудников по году окончания контракта.
+			</h3>
+		</div>
+
+		<div id="ending-contract-by-year-3" class="invisible">
+			<h3 class="din-label">
+				Выброрка списка сотрудников по году окончания контракта.
+			</h3>
+			<p class="din-label">Извините, сотрудников с указанным годом окончания нет в списке.</p>
+		</div>
+
+		<div id="ending-contract-with-first-quarter" class="invisible">
+			<h3 class="din-label">
+				Сотрудники с оканчивающимися в 1 квартале контрактами.
+			</h3>
+		</div>
+	</div>
+</body>
+</html>

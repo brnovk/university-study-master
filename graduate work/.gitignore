@@ -1,0 +1,35 @@
+# MS Office temp files #
+~*.doc*
+
+# Eclipse - files/catalogs of project #
+/.settings
+/Java
+/target
+.metadata/
+.recommenders/
+build/
+RemoteSystemsTempFiles/
+Servers/
+bin/
+/.project
+/.classpath
+
+# Netbeans - files/catalogs of project #
+build/
+conf/
+dist/
+nbproject/private/
+lib/CopyLibs/
+lib/javaee-endorsed-api-6.0/
+lib/nblibraries.properties
+
+# Maven #
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties

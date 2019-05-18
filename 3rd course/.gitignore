@@ -1,0 +1,23 @@
+# Borland C++ Builder 6 temp/unnecessary files #
+*.exe
+*.tds
+*.obj
+*.~*
+
+# wxDev-C++ 7.4 temp/unnecessary files #
+*.exe
+*.win
+*.layout
+*.o
+*.~*
+[Oo]bjects/
+[Oo]utput/
+
+# VS2013 temp/unnecessary files #
+*.exe
+*.~*
+[Bb]in/
+[Oo]bj/
+
+# MS Office temp files #
+~*.doc*

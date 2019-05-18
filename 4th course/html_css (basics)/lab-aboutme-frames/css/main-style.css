@@ -1,0 +1,382 @@
+﻿/* ---------------------------------------------------------- CSS Reset ---- */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, 
+input, textarea, p, blockquote, th, td {
+	margin: 0;
+	padding: 0;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+fieldset, img {
+	border: 0;
+}
+address, caption, cite, code, dfn, th, var {
+	font-style: normal;
+	font-weight: normal;
+} 
+ol, ul {
+	list-style: none;
+} 
+caption, th {
+	text-align: left;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+q:before, q:after {
+	content: '';
+}
+abbr, acronym {
+	border: 0;
+}
+
+
+/* ------------------------------------------------------ Clearfix Hack ---- */
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+.clearfix { 
+	display: inline-block; 
+}
+* html .clearfix { 
+	height: 1%;
+}
+.clearfix { 
+	display: block; 
+}
+
+
+/* shifted-right / shifted-left	/ offset-down		(Float Property)
+-----------------------------------------------------------------------------*/
+
+.shifted-right {
+	float: right;
+}
+
+.shifted-left {
+	float: left;
+}
+
+.offset-down {
+	margin-top: 0.8em;
+}
+
+
+/* throud / bold / italic				(Text Disign Effects)
+-----------------------------------------------------------------------------*/
+
+.throud {
+	text-decoration: line-through;
+}
+
+.bold {
+	font-weight: bold;
+}
+ 
+.italic {
+	font-style: italic;
+}
+
+
+
+html {
+	height: 100%;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
+section, summary {
+	display: block;
+}
+
+body {
+	font: 15px/18px Arial, Sans-serif;
+	width: 100%;
+	height: 100%;
+}
+
+.page-wrapper {
+	width: 930px;
+	margin: 0 auto;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+}
+
+
+/* page-header                 					(Header Page)
+-----------------------------------------------------------------------------*/
+.page-header {
+	height: 100px;
+	background: url('../img/header-background.png') #ffd47e no-repeat 0 0;
+	margin-bottom: 18px;
+}
+
+.page-header .header-block {
+	float: right;
+	padding: 15px 200px 0 0;
+	font: 12px/18px Helvetica, Sans-serif;
+	line-height: 2em;
+}
+
+.page-header .header-block .header-text {
+	font-size: 15px;
+	color: #468687;
+}
+
+.page-header .header-block .header-text strong {
+	font-size: 25px;
+	color: #326c6b;
+}
+
+
+/* main-wrapper						(Middle Part Page)
+-----------------------------------------------------------------------------*/
+.main-wrapper {
+	padding: 0 0 80px;
+	margin: 0 30px 0 30px;
+}
+
+
+/* main-wrapper > progress-bar				(Progress Bar)
+-----------------------------------------------------------------------------*/
+
+.progress-bar {
+    margin: 30px 0;
+   	width: 100%;
+   	height: 38px;
+   	background-color: #ccc; 
+}
+
+.progress-bar li {
+	display: inline;
+	float: left;
+	height: 30px;
+    width: 32.86%;
+    padding: 3px 0 3px 3px;
+}
+
+.progress-bar .text {
+	display: block;
+	text-align: center;
+	font-size: 18px;
+	line-height: 1.8em;
+	background-color: #468687;
+	color: #ffd47e;
+}
+
+.progress-bar .active .text {
+    background-color: #ffc25c;
+    color: #326c6b;
+}
+
+
+/* main-wrapper > article-avatar			(Article Avatar)
+-----------------------------------------------------------------------------*/
+
+.article-avatar img {                  
+	border: 1px solid #744942;
+}
+
+
+/* main-wrapper > article-title				(Article Title)
+-----------------------------------------------------------------------------*/
+
+.article-title {
+	text-align: center;
+	margin: 4em;
+}
+
+.article-title h1 {
+	font-size: 2em;
+}
+
+
+/* main-wrapper > article-chapter			(Article Chapter)
+-----------------------------------------------------------------------------*/
+
+.article-chapter {
+	margin: 2.5em 0;
+}
+
+.article-chapter ul {
+	padding-left: 1.5em;
+}
+
+.article-chapter li {
+	list-style: disc;
+}
+
+.article-chapter h2 {
+	line-height: 2em;
+    font-size: 1.3em;
+}
+
+.article-chapter p {
+    margin: 0.5em 0;
+}
+
+
+/* main-wrapper > spoiler 				(Spoiler Section)
+-----------------------------------------------------------------------------*/
+
+.spoiler >  input + .box > blockquote{
+    display: none;
+}
+
+.spoiler >  input:checked + .box > blockquote {
+    display: block;
+}
+
+.spoiler >  input[type="checkbox"] {
+    cursor: pointer;
+    border-color: transparent !important;
+    border-style: none !important;
+    background: transparent none !important;
+    position: relative;
+    z-index: 1;
+    margin: -10px 0 0 -230px;
+    width:350px; 
+    height: 10px;
+ }
+
+.spoiler >  input[type="checkbox"]:focus {
+    outline:none;			/* Убираем обводку в ИЕ8 при "фокусе" */
+}
+
+.spoiler span.close,
+.spoiler span.open{
+    padding-left:22px;
+    color: #00f!important;
+    text-decoration: underline;
+}
+
+.spoiler >  input +  .box > span.close {
+    display: none;
+}
+
+.spoiler >  input:checked +  .box > span.close {
+    background: url(../img/spoiler-minus.png) 4px 60% no-repeat;
+    display: inline;
+}
+
+.spoiler >  input:checked  + .box > span.open {
+    display: none;
+}
+
+.spoiler >  input +  .box >  span.open {
+    background: url(../img/spoiler-plus.png) 4px  60% no-repeat;
+    display: inline;
+}
+
+.spoiler {
+    padding: 0.15em 0.5em;
+}
+
+.spoiler blockquote {
+    padding: 1em;
+}
+
+.spoiler {
+    overflow-x:hidden;
+}
+
+.spoiler blockquote {
+   margin-top: 12px;
+   min-height: 23px;
+   border:#CDCDCD 2px dashed;
+}
+
+.box{
+	margin-top: -20px;
+}
+
+
+/* main-wrapper > frame-container 			(Frame Container)
+-----------------------------------------------------------------------------*/
+
+.frame-container {
+	/*border: 1px solid #000;*/
+	margin: 2em 0;
+}
+
+.frame-container iframe {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+
+/* main-wrapper > decoration-block  		(Decorative Block "Down Arrow")
+-----------------------------------------------------------------------------*/
+
+.decoration-block {
+	background-image: url("../img/decorative-arrow.png") ;
+	background-repeat: repeat-x;
+	width: 100%;
+	height: 25px;
+	margin: -10px 0;
+}
+
+/* main-wrapper > navigation-panel 			(Navigation panel)
+-----------------------------------------------------------------------------*/
+
+.navigation-panel {
+	margin: 1em 0;
+}
+
+.navigation-panel a {
+	text-decoration: none; 
+}
+
+.navigation-panel .text-button {
+	font-size: 1.3em; 
+	font-weight: bold;
+	color: #468687;
+}
+
+/* page-footer						(Footer Page)
+-----------------------------------------------------------------------------*/
+.page-footer {
+	width: 930px;
+	margin: -80px auto 0;
+	height: 80px;
+	background: #744942;
+	position: relative;
+	font-size: 12px;
+}
+
+
+/* page-footer > footer-block 				(Navigation panel)
+-----------------------------------------------------------------------------*/
+
+.footer-block {
+	display: block;
+	margin: 5px 0 0 0; 
+	float: right;
+	padding-right: 60px;
+	color: white;
+}
+
+.footer-block .title {
+	font-weight: bold;
+	font-style: normal;
+	color: #ccc;
+}
+
+.footer-block .signature {
+	font-style: normal;
+	color: #ffc25c;
+}
+
+.footer-block a {
+	text-decoration: none;
+	color: #ccc;
+}

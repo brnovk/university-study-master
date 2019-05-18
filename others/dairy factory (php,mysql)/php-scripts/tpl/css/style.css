@@ -1,0 +1,242 @@
+/* Eric Meyer's CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* End of Eric Meyer's CSS Reset */
+
+.cleafix:before,
+.cleafix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cleafix:after {
+    clear: both;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+html {
+    height: 100%;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+    display: block;
+}
+body {
+    font: 14px/18px Arial, sans-serif;
+    width: 100%;
+    height: 100%;
+    background: url("../images/background.png") no-repeat right bottom;
+    background-attachment: fixed;
+}
+.wrapper {
+    width: 1000px;
+    margin: 0 auto;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+}
+
+/* Header
+-----------------------------------------------------------------------------*/
+.header {
+    height: 50px;
+}
+
+/* Middle
+-----------------------------------------------------------------------------*/
+.content {
+    padding: 0 0 75px;
+}
+
+.content h1 {
+    margin: 15px 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.content h2 {
+    margin: 10px 0 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.content .section {
+    margin: 15px 5px 35px;
+}
+
+.content .timestamp {
+    margin: 5px 15px 0 0;
+    color: darkcyan;
+}
+
+/* Footer
+-----------------------------------------------------------------------------*/
+.footer {
+    width: 1000px;
+    margin: -75px auto 0;
+    height: 75px;
+    position: relative;
+}
+
+.footer .author-description {
+    background-color: #333;
+    display: inline-block;
+    color: white;
+    padding: 10px 10px 11px;
+}
+
+.footer .author-description strong {
+    font-weight: bold;
+    color: aqua;
+}
+
+/* ------------------ меню*/
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.menu li {
+    float: left;
+}
+
+.menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.menu li a:hover {
+    background-color: #111;
+}
+
+.menu .active a {
+    color: aqua;
+}
+
+/* ----- add-form */
+.add-form {
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.add-form textarea,
+.add-form input[type="text"],
+.add-form select {
+    width: 400px;
+}
+
+.add-form textarea {
+    height: 200px;
+}
+
+.add-form label {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.add-form input[type="submit"] {
+    width: 100%;
+    margin: 10px 0 0;
+    padding: 5px;
+}
+
+.form-about textarea,
+.form-about input[type="text"],
+.form-about input[type="password"]{
+    width: 600px;
+}
+
+/* ----- err block */
+.error {
+    padding: 5px 10px;
+    margin-top: 5px;
+    color: white;
+    background-color: darkcyan;
+    font-weight: bold;
+}
+
+/* for JS */
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+/* button на сайте - только Показать скрытый блок. Всё остальное input[submit]*/
+button {
+    background: #444;
+    display: inline-block;
+    padding: 3px 10px 3px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 1;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-box-shadow: 0 1px 3px #999;
+    -webkit-box-shadow: 0 1px 3px #999;
+    text-shadow: 0 -1px 1px #222;
+    border-bottom: 1px solid #222;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 2px;
+}

@@ -1,0 +1,234 @@
+.tables,
+.tables td,
+.tables th {
+	border: 1px solid #ccc;
+	border-collapse: collapse;
+	padding: 2px 2px 2px 5px;
+	margin: 5px;
+	text-align: right;
+}
+.tables caption {
+	padding: 5px;
+	background-color: #ccc;
+}
+.tables thead {
+	background-color: #ddd;
+}
+
+.tables {
+	width: 600px;
+}
+
+.din-label {
+	margin-left: 5px;
+}
+
+.menu-list {
+	border-bottom: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	list-style: none;
+	padding: 0;
+}
+
+.menu-list li {
+	border-top: 1px solid #ccc;
+	cursor: pointer;
+	padding: 3px 10px;
+}
+
+.menu-list li:hover {
+	background-color: orange;
+}
+
+.menu-list li.active,
+.menu-list li.active:hover {
+	background-color: #3d82ad;
+	cursor: default;
+	color: #ddd;
+}
+
+.visible {
+	display: block;
+}
+
+.invisible {
+	display: none;
+}
+
+/*Форма добавления и редактирования*/
+
+.form-add-node input[type="text"],
+.form-add-node input[type="number"],
+.form-change-node input[type="text"],
+.form-change-node input[type="number"] {
+	margin: 5px 5px;
+	height: 20px;
+	width: 260px;
+}
+
+.form-add-node label,
+.form-change-node label {
+	display: inline-block;
+	width: 215px;
+	height: 21px;
+	text-align: right;
+}
+
+.form-add-node input[type="submit"],
+.form-change-node input[type="submit"] {
+	margin: 5px 5px;
+	width: 485px;
+	height: 30px;
+}
+
+/*Форма выбора записи для редактирования*/
+
+.form-select-for-change-node,
+.form-select-for-delete-node {
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	width: 485px;
+}
+
+.form-select-for-change-node .radio-list-item,
+.form-select-for-delete-node .radio-list-item {
+	border-top: 1px solid #ccc;
+	text-align: right;
+	padding: 3px;
+}
+
+.form-select-for-change-node .radio-list-item:hover,
+.form-select-for-delete-node .radio-list-item:hover {
+	background-color: #3d82ad;
+	color: #ddd;
+}
+
+.form-select-for-change-node label:hover,
+.form-select-for-delete-node label:hover {
+	cursor: pointer;
+}
+
+/*Форма поиска*/
+
+.form-find-node {
+	padding-right: 0;
+	width: 485px;
+}
+
+.form-find-node .radio-list-field {
+	text-align: right;
+	padding: 3px;
+}
+
+.form-find-node input[type="submit"] {
+	margin: 5px 5px;
+	width: 475px;
+	height: 30px;
+}
+
+.form-find-node input[type="text"] {
+	margin: 5px 5px;
+	height: 20px;
+	width: 260px;
+}
+
+.form-find-node label {
+	width: 135px;
+	height: 21px;
+}
+
+.form-find-node label:hover {
+	cursor: pointer;
+	color: #3d82ad;
+}
+
+.left-offset {
+	float: left;
+}
+
+.right-offset {
+	float: right;
+}
+
+.clearfix:after {
+   content: " ";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+body {
+	margin: 0;
+}
+
+.menu-container {
+	height: 88px;
+	background-color: #293946;
+}
+
+.main-container {
+    margin: 0 auto;
+    width: 912px;
+	
+}
+
+.left-jump {
+	width: 70px;
+	border-right: 1px solid #6E8492;
+	height: 100%;
+	text-align: center;
+	font-size: 50px;
+	font-weight: bold;
+}
+
+.right-jump {
+	width: 70px;
+	border-left: 1px solid #6E8492;
+	height: 100%;
+	text-align: center;
+	font-size: 50px;
+	font-weight: bold;
+}
+
+.right-jump a,
+.left-jump a {
+	display: block;
+	margin: 15px;
+	text-decoration: none;
+}
+
+.right-jump a,
+.right-jump a:visited,
+.right-jump a:active,
+.left-jump a,
+.left-jump a:visited,
+.left-jump a:active {
+	color: #009A28;
+}
+
+.descpiption-block {
+	margin: 1px 5px 0 5px;
+	height: 87px;
+	padding: 0 5px;
+	line-height: 17px;
+	border-right: 1px solid #6E8492;
+	color: #ccc;
+}
+
+.descpiption-block em {
+	color: #D5B970;
+}
+
+.descpiption-block strong {
+	color: #009A28;
+}
+
+.task-block {
+	margin: 1px 5px 0 5px;
+	padding: 0 5px;
+	line-height: 17px;
+	color: #ccc;
+}

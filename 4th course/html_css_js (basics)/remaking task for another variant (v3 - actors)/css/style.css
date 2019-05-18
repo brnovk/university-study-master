@@ -1,0 +1,347 @@
+/* Yahoo! CSS Reset */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, 
+input, textarea, p, blockquote, th, td {
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+fieldset, img {
+	border: 0;
+}
+
+address, caption, cite, code, dfn, em, th, var {
+	font-style: normal;
+	font-weight: normal;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+caption, th {
+	text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+
+q:before, q:after {
+	content: '';
+}
+
+abbr, acronym {
+	border: 0;
+}
+
+/* End of Yahoo! CSS Reset */
+
+html {
+	height: 100%;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
+section, summary {
+	display: block;
+}
+
+body {
+	font: 12px/18px Arial, sans-serif;
+	width: 100%;
+	height: 100%;
+}
+
+.page-wrapper {
+	width: 1000px;
+	margin: 0 auto;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+}
+
+/* Header Page [top_div]
+-----------------------------------------------------------------------------*/
+.page-header {                                  /* [top_div] */
+	height: 90px;
+	background: url('../img/logo.png') #d8e0f0 no-repeat 0 0;
+	margin-bottom: 18px;
+	padding-left: 300px;
+}
+
+.page-header .header-block {
+	padding-top: 27px;
+}
+
+.page-header .header-block .header-text {
+	font-size:17px;
+	color: #ff964b;
+}
+
+.page-header .header-block .header-text strong {
+	color: #008B8B;
+}
+
+/* Middle Part Page 
+-----------------------------------------------------------------------------*/
+.page-content-wrapper {
+	width: 100%;
+	padding: 0 0 65px;
+	position: relative;
+}
+
+.page-content-wrapper:after {
+	display: table;
+	clear: both;
+	content: '';
+}
+
+.main-wrapper {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+}
+
+.article-container {                           /* [main_div] */
+	padding: 0 170px 0 220px;
+	line-height: 1.3;
+	font-size:13px;
+}
+
+.article-avatar {                               /* [sw_div] */
+	float: right;
+}
+
+.article-title {
+	text-align: center;
+	margin-bottom: 70px;
+}
+
+.article-title h1 {
+	font-size: 2em;
+}
+
+
+.article-chapter {
+	margin: 20px 0;
+}
+
+.article-chapter h2 {
+    font-size:1.3em;
+    margin-top:0.7px;
+}
+
+.article-chapter p {
+    margin-top:0.7em;
+    margin-bottom:0.5em;
+}
+
+/* Только для страниц с 2-мя колонками (не актёры) */
+.other-article-container {
+	padding: 0 0px 0 220px;
+	line-height: 1.3;
+	font-size:13px;
+}
+
+/* Только для страниц с 2-мя колонками (не актёры) */
+.other-article-container table,
+.other-article-container table tr, 
+.other-article-container table td {
+	margin: 20px 0 10px 0;
+	border: 1px solid #ccc;
+	border-collapse: collapse;
+}
+
+/* Только для страниц с 2-мя колонками (не актёры) */
+.other-article-container table {
+	width: 780px;
+	height: 308px;
+}
+
+/* Только для страниц с 2-мя колонками (не актёры) */
+.other-article-container tbody {
+	vertical-align: top;
+	line-height: 40px;
+}
+
+/* Только для страниц с 2-мя колонками (не актёры) */
+.other-article-container textarea {
+	width: 295px;
+	height: 115px;
+	margin: 15px 0 0 8px;
+}
+
+/* Только для страниц с 2-мя колонками (не актёры) */
+.other-article-container input[type="text"] {
+	width: 294px;
+	margin: 13px 0 40px 0;
+}
+
+/* Только для страниц с 2-мя колонками (не актёры) */
+.large-indent {
+	text-align: center;
+}
+
+/* Только для страниц с 2-мя колонками (не актёры) */
+.small-indent {
+	padding-left: 8px;
+}
+
+/* Только для страниц с 2-мя колонками (не актёры) */
+.other-article-container li {
+    margin-left:  20px;
+    list-style:circle;
+    font-style: italic;
+}
+
+/* Только для страниц с 2-мя колонками (не актёры) */
+.other-article-container .article-task-pic {
+	float: right;
+	margin: 5px 0 20px 20px;
+}
+
+/* Только для страниц с 2-мя колонками (не актёры) */
+.other-article-container .article-title {
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+/* Только для страниц с 2-мя колонками (не актёры) */
+.other-article-container .article-chapter {
+	margin: 15px 0;
+}
+
+
+/* Left Sidebar Page
+-----------------------------------------------------------------------------*/
+.menu-container {                              /* [left_div] */
+	float: left;
+	width: 200px;
+	margin-left: -100%;
+	position: relative;
+}
+
+.menu-container .title-sidebar-menu {
+	padding-top: 20px;
+}
+
+
+/* Right Sidebar Page
+-----------------------------------------------------------------------------*/
+.sidebar-container {                          /* [right_div] */
+	float: left;
+	width: 150px;
+	margin-left: -150px;
+	position: relative;
+}
+
+/* sidebar-menu
+-----------------------------------------------------------------------------*/
+.sidebar-menu {                               /* [reg_div & sch_div] */
+    width:200px;
+    padding:0;
+    margin:0;
+    list-style:none;
+    border-bottom:1px solid #ff964b;
+}
+
+.sidebar-menu a {
+	color: #ff964b;
+    display:block;
+    padding:8px 14px;
+    margin-bottom:-1px;
+    text-decoration:none;
+    border-top:1px solid #ff964b;
+}
+
+.sidebar-menu a:hover {
+	color: white;
+	background-color: #f5dcd1;
+}
+
+.sidebar-menu .active a {
+	color: white;
+	font-weight: bold;
+	background-color: #ff964b;
+}
+
+.sidebar-menu .active a:hover {
+	cursor: default;
+}
+
+.title-sidebar-menu {
+	display:block;
+	color: #ffaa4b;
+	padding: 8px 5px;
+	font-weight: bold;
+}
+
+/* sidebar-note
+-----------------------------------------------------------------------------*/
+.sidebar-note {                                /* райт див */
+    width:200px;
+    padding:0;
+    margin:0;
+}
+
+.title-sidebar-note {
+	color: #ff964b;
+	font-weight: bold;
+	padding-left: 5px;
+}
+
+.content-sidebar-note {
+	margin: 10px 0 10px 10px;
+	color: #979ca8;
+}
+
+.content-sidebar-note li {
+	margin: 10px 0 10px 10px;
+	list-style: circle;
+}
+
+/* Footer Page
+-----------------------------------------------------------------------------*/
+.page-footer {                               /* [bottom_div] */
+	width: 1000px;
+	margin: -65px auto 0;
+	height: 65px;
+	background: #d8e0f0;
+	position: relative;
+}
+
+.footer-block {
+	display: block;
+	margin: 5px 0 0px 20px; 
+	float: left;
+	color: #0099CC;
+}
+
+.footer-block .title {
+	font-weight: bold;
+	font-style: normal;
+	color: #ff964b;
+}
+
+.footer-block .signature {
+	font-style: normal;
+	color: #344152;
+}
+
+.footer-block a {
+	text-decoration: none;
+	color: #37FDFC;
+}
+
+/*
+	#ff5a2e - самый оранжевый
+	#ff964b - более тусклый оранжевый
+	#f2d082 - почти жёлтый оранжевый
+	#f5dcd1 - тускло розовый
+	#d8e0f0 - тускло сиреневый
+*/

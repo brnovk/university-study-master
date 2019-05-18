@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Лабораторная №3</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js" type="text/javascript" charset="utf-8" async defer>
+	</script>
+</head>
+<body onmousemove="inproc(event)">
+
+	<div class="main-container">
+
+		<div class="menu-container clearfix">
+
+			<div class="left-jump left-offset">
+				<a href="../lab2/lab2.html" title="Переход к лабораторной №2">&lt;</a>
+			</div>
+
+			<div class="menu-content left-offset">
+			
+				<div class="descpiption-block left-offset">
+					<strong>
+						Лабораторная работа №3
+					</strong><br>
+					<span>
+						<em>Группа:</em> ПОИТ-61
+					</span><br>
+					<span>
+						<em>Вариант:</em> 4
+					</span><br>
+					<span>
+						<em>ФИО:</em> Баранов В.Ф.
+					</span>
+				</div>
+
+				<div class="task-block right-offset">
+					Реализовать переключение 2 режимов отображения: только заголовки или с<br>
+					только заголовки или заголовки и содержимое.<br>
+					1-ый заголовок - изменения цвета текста при наведении мыши<br>
+					2-ой заголовок - виде “резинового” текста, растягивающегося влево.<br>
+					Сделать изменение размера изображения в указанном направлении &rarr;.<br>
+				</div>
+			</div>
+
+			<div class="right-jump right-offset">
+				<a href="../lab4/lab4.html" title="Переход к лабораторной №4">&gt;</a>
+			</div>
+		</div>
+
+		<div class="action-box">
+
+			<form action="demo_form.asp">
+				
+				<input type="radio" 
+						id="lid1" 
+						name="radio-item"
+						value="radio-headers-only" 
+						onclick="handleClick();">
+				<label for="lid1">Только заголовки</label><br>
+				<input type="radio"
+						id="lid2" 
+						name="radio-item" 
+						value="radio-headers-and-content"
+						onclick="handleClick();"
+						checked>
+				<label for="lid2">Заголовки и содержимое</label>
+			</form>
+
+			<div class="header-and-content-box">
+				<h4 class="header-box" 
+					onmouseover="fnsh1()" 
+					onmouseout="rest1()">
+					1-ый тестовый заголовок.
+				</h4>
+				<div class="content">
+					Возникновение теории вероятностей как науки относят к средним
+					векам и первым попыткам математического анализа азартных игр
+					(орлянка, кости, рулетка). Первоначально её основные понятия
+					не имели строго математического вида, к ним можно было
+					относиться как к некоторым эмпирическим фактам, как к
+					свойствам реальных событий, и они формулировались в наглядных
+					представлениях.
+				</div>
+			</div><!-- header-and-content-box -->
+
+			<div class="header-and-content-box">
+				<h4 class="header-box" id="hh2"
+					onmousedown="strt2()" 
+					onmouseup="fnsh2()" 
+					onmouseout="rest2()"
+					style="letter-spacing: 0px">
+					2-ый тестовый заголовок.
+				</h4>
+				<div class="content">
+					Самые ранние работы учёных в области теории вероятностей
+					относятся к XVII веку
+				</div>
+			</div><!-- header-and-content-box -->
+
+			<div class="header-and-content-box">
+				<h4 class="header-box">
+					3-ый тестовый заголовок.
+				</h4>
+				<div class="content">
+					Важный вклад в теорию вероятностей внёс Якоб Бернулли: он дал
+					доказательство закона больших чисел в простейшем случае
+					независимых испытаний. В первой половине XIX века теория
+					вероятностей начинает применяться к анализу ошибок наблюдений.
+				</div>
+			</div><!-- header-and-content-box -->
+
+			<img class="content" src="stretching_img.png"
+				width = "400"
+				alt="Растягиваемое изображение" 
+				onmousedown="strt()" 
+				onmouseup="fnsh()" 
+				onmouseout="rest()">
+		</div><!-- action-box -->
+	</div>
+</body>
+</html>

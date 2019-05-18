@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Subtask 5</title>
+	<link rel="stylesheet" href="css/app-style.css">
+</head>
+<body>
+	<h1>Selection of image by themes (nature, cars, kids, etc.)<br>
+		and display it.</h1><hr>
+	<a href="index.jsp" title="To main page">To main</a><br>
+	<form action="Subtask5Controller" method="GET" accept-charset="utf-8">
+		<div>
+			<label for="idTheme">Select theme image:</label>
+			<select id="idTheme" name="theme" required="required">
+				<option value="kids" selected="selected">Kids</option>
+				<option value="cars">Cars</option>
+				<option value="nature">Nature</option>
+				<option value="unknown">Unknown</option>
+			</select>
+		</div>
+		<div>
+			<input type="submit" value="Submit" />
+		</div>
+	</form>
+</body>
+</html>

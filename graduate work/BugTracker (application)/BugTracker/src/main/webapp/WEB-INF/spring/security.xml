@@ -1,0 +1,35 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+http://www.springframework.org/schema/security
+http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+
+	<http access-denied-page="/error403.jsp" use-expressions="true">
+		<intercept-url pattern="/Admin/**"
+			access="hasAnyAuthority('ADMINISTRATOR')" />
+		<intercept-url pattern="/Issues/*"
+			access="hasAnyAuthority('ADMINISTRATOR,USER')" />
+		<intercept-url pattern="/Users/*"
+			access="hasAnyAuthority('ADMINISTRATOR,USER')" />
+		<intercept-url pattern="/Issues*"
+			access="hasAnyAuthority('USER,GUEST,ADMINISTRATOR')" />
+		<form-login login-page="/login.jsp"
+			authentication-failure-url="/login.jsp?error=true" />
+		<logout logout-url="/logout" logout-success-url="/" />
+
+		<anonymous username="guest" granted-authority="GUEST" />
+		<remember-me />
+	</http>
+
+	<authentication-manager>
+		<authentication-provider>
+			<jdbc-user-service id="userService"
+				data-source-ref="dataSource"
+				users-by-username-query="select emailaddress, password, true from users where emailaddress=?"
+				authorities-by-username-query="SELECT emailaddress, USERROLE FROM users WHERE emailaddress=?" />
+
+		</authentication-provider>
+	</authentication-manager>
+
+</beans:beans>

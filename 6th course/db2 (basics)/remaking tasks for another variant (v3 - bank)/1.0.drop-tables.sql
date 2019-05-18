@@ -1,0 +1,12 @@
+-- ------ Removing tables, if they exist: first the child, then parent --------
+
+CONNECT TO LABSV3;
+
+DROP TABLE TRANSFER;
+DROP TABLE OPERATION;
+DROP TABLE CLIENT;
+DROP TABLE DEPOSIT;
+DROP TABLE EMPLOYEE;
+DROP TABLE POST;
+
+CONNECT RESET;

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Фреймы (дополнительная версия)</title>
+	<meta name="keywords" content="Лабораторная, html, часть 3">
+	<meta name="description" content="Третья часть лабораторной работы номер 1">
+	<!--[if IE]>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+	<!--[if lt IE 9]>
+		<script src="scripts/html5.js"></script>
+		<script src="scripts/IE9.js"></script>
+		<noscript>
+			<strong>Внимание!</strong>
+			Так как ваш браузер не поддерживает HTML5, некоторые элементы 
+			моделируются с помощью JavaScript. К сожалению, в вашем браузере
+			отключено исполнение JavaScript-сценариев. Пожалуйста, включите
+			поддержку скриптов для этой страницы.
+		</noscript>
+	<![endif]-->
+	<link href="css/main-style.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="page-wrapper">
+
+	<header class="page-header">
+
+		<div class="header-block">
+
+			<span class="header-text">
+				Лабораторная работа №1 по дисциплине:<br>
+			</span>
+			<span class="header-text">
+				<strong>Компьютерные сети и системы</strong>
+			</span>
+		</div><!--header-block-->
+	</header><!--page-header-->
+
+	<main class="main-wrapper">
+
+		<article class="article-container clearfix">
+
+			<div class="progress-bar">
+				<ul>
+					<li><span class="text">Часть 1</span></li>
+					<li><span class="text">Часть 2</span></li>
+					<li class="active"><span class="text">Часть 3</span></li>
+				</ul>
+			</div><!--progress-bar-->
+
+			<div class="article-title">
+				<h1>Ресурсы в фреймах (дополнительная версия)</h1>
+			</div>
+
+			<div class="frame-container">
+				<!-- Фикс border для IE8 и ниже... -->
+				<!--[if IE]>
+					<iframe src="frames/part3-links.html"
+							frameborder="0" 
+							height="234" 
+							width="870">
+				<![endif]-->
+				<!--[if !IE]>-->
+					<iframe src="frames/part3-links.html" 
+							height="213" 
+							width="870">
+				<!--<![endif]-->
+						Не удаётся отобразить фрейм <em>part3-links.html</em>!
+					</iframe>
+			</div><!--frame-container-->
+
+			<div class="decoration-block">
+			</div> <!--decoration-block-->
+
+			<div class="frame-container">
+				<!-- Фикс border для IE8 и ниже... -->
+				<!--[if IE]>
+					<iframe src="frames/display-default.html"
+							frameborder="0" 
+							name="display-resources-frame" 
+							height="250" 
+							width="870">
+				<![endif]-->
+				<!--[if !IE]>-->
+					<iframe src="frames/display-default.html" 
+							height="250" 
+							name="display-resources-frame" 
+							width="870">
+				<!--<![endif]-->
+						Не удаётся отобразить фрейм <em>display-default.html</em>!
+					</iframe>
+			</div><!--frame-container-->
+
+		</article><!--article-container-->
+
+		<nav class="navigation-panel clearfix">
+		
+			<div class="navigation-column shifted-left offset-down">
+				<a href="main-lab1-part2.html" title="Перейти к предыдущей странице...">
+					<span class="text-button">&lt; Haзад</span>
+				</a>
+			</div>
+
+			<div class="navigation-column shifted-right">
+				<a href="main-lab1-part1.html" title="Перейти к первой странице...">
+					<img src="img/button-begin.png" width="200" height="40" alt="Button NEXT">
+				</a>
+			</div>
+		</nav><!--navigation-panel-->
+	</main><!--main-wrapper-->
+</div><!--page-wrapper-->
+
+<footer class="page-footer">
+
+	<div class="footer-block">
+		<address>
+			<span class="title">Выполнено:</span><br>
+			<span class="signature">Группа:</span> ПОИТ-41<br>
+			<span class="signature">Студент:</span> Виктор Баранов<br>
+			<span class="signature">E-mail:</span> 
+			<a href="mailto:some@example.by">some@example.by</a>
+		</address>
+	</div><!--footer-block-->
+</footer><!--page-footer-->
+
+</body>
+</html>

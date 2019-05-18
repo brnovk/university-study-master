@@ -1,0 +1,211 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1251">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>$I Выполнение задания № 1</TITLE>
+<META NAME="Template" CONTENT="C:\PROGRAM FILES\MICROSOFT OFFICE\OFFICE\html.dot">
+</HEAD>
+<BODY LINK="#0000ff" VLINK="#800080" BACKGROUND="Image0.gif">
+
+<B><FONT FACE="Times New Roman" SIZE=2 COLOR="#000080"><P>I Выполнение задания № 1.</P>
+</B></FONT><H6><A HREF="Help.htm"><FONT FACE="Times New Roman">*Возврат в основное меню*</FONT></A> <A HREF="Help_2.htm"><FONT FACE="Times New Roman">*К Заданию №2*</FONT></A> <A HREF="Help_3.htm"><FONT FACE="Times New Roman">*К Заданию №3*</FONT></A></H6>
+<P><HR></P>
+<FONT FACE="Times New Roman"><H6>Структуризация внутренней сети с помощью маски постоянной длины на примере IP-адреса класса В.</H6>
+<H6>Цель работы: Научиться организовывать заданное число подсетей с учетом вырожденной сети, используя маску подсети постоянной длины.</H6>
+</FONT><H6><IMG SRC="Image1.gif" WIDTH=550 HEIGHT=501></H6>
+<FONT FACE="Times New Roman" COLOR="#800000"><H6>Главное меню. Рис.1.</H6>
+</FONT><FONT FACE="Times New Roman"><H6>1. В Главном меню курсором выбрать закладку "Задание № 1</FONT>". <FONT FACE="Times New Roman" SIZE=1>В появившейся таблице исходных данных выбрать строку с соответствующим номером варианта, дважды щелкнув мышью по строке таблицы. Например: Вариант-1, Число подсетей-3. Это значит, что необходимо будет организовать 3 подсети + 1 вырожденная (соединяющая маршрутизаторы М1 и М2). </H6>
+</FONT><FONT FACE="Times New Roman"><H6>2. В появившейся форме ввод во всех окнах ввода заканчивается щелчком "мыши" вне окна ввода.</H6>
+</FONT><H6><IMG SRC="Image8.gif" WIDTH=549 HEIGHT=399></H6>
+<FONT FACE="Times New Roman" COLOR="#800000"><H6>Рабочее окно программы. Рис.2.</H6>
+</FONT><FONT FACE="Times New Roman"><H6>Ввести в окне ввода "Номер сети" любой номер сети из диапазона IP-адресов класса B. </H6>
+<H6>Например: </FONT><FONT COLOR="#800000">128.1.0.0</FONT>.</H6>
+<FONT FACE="Times New Roman"><H6>Для получения информации о классах IP - адресов щелкнуть правой кнопкой "мыши" на окне Ввода, в появившемся меню выбрать "Класс В". Появится диапазон номеров сетей данного класса (Internet - адрес) и диапазон адресов, не обрабатываемых Internet - маршрутизаторами (локальных), которые нельзя использовать при выполнении задания. </H6>
+<H6>3. Определить маску, необходимую для образования заданного количества подсетей (в нашем примере 4-х).</H6>
+<H6>Для этого:</H6>
+<H6>3.1. Расписать в двоичном исчислении последовательный перебор номеров подсетей, подлежащих образованию, учитывая, что номер не может содержать все '0' или все '1':</H6>
+</FONT><FONT COLOR="#800000"><H6>001</H6>
+<H6>010</H6>
+<H6>011</H6>
+<H6>100</H6>
+</FONT><FONT FACE="Times New Roman"><H6>Для определения номера подсети необходимо 3 разряда (перебор '00,01,10,11' не подходит).</H6>
+<H6>3.2. Определяем количество разрядов, подлежащих маскированию.</H6>
+<H6>В нашем примере маска должна иметь все единицы в поле номера сети и 3 единицы в старших разрядах поля номера узла (маски для стандартных IP - адресов можно просмотреть щелкнув правой кнопкой "мыши" в окне "Маска подсети").&nbsp;</H6>
+<H6><A NAME="mask">Возможные значения маски подсети. Таблица 1. (Переход: </FONT><A HREF="Help_2.htm#mask2"><FONT FACE="Times New Roman">к заданию №2</FONT></A> , <A HREF="Help_3.htm#mask3"><FONT FACE="Times New Roman">к заданию №3</FONT></A> )</H6>
+<FONT SIZE=1><P></A></P></FONT>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=453>
+<TR><TD WIDTH="19%" VALIGN="TOP">
+<P ALIGN="CENTER"><FONT FACE="Times New Roman" SIZE=1>Маска</FONT></TD>
+<TD WIDTH="48%" VALIGN="TOP">
+<FONT FACE="Times New Roman" SIZE=1><P ALIGN="CENTER">Двоично-точечная запись</FONT></TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<FONT FACE="Times New Roman" SIZE=1><P ALIGN="CENTER">разряды</FONT></TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<FONT FACE="Times New Roman" SIZE=1><P ALIGN="CENTER">кол-во подсетей</FONT></TD>
+<TD WIDTH="12%" VALIGN="TOP">
+<FONT FACE="Times New Roman" SIZE=1><P ALIGN="CENTER">кол-во узлов</FONT></TD>
+</TR>
+<TR><TD WIDTH="19%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">255.255.128.0</FONT></TD>
+<TD WIDTH="48%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">11111111.11111111.10000000.00000000</FONT></TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">1</FONT></TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<FONT SIZE=1><P>0 </FONT></TD>
+<TD WIDTH="12%" VALIGN="TOP">
+<FONT SIZE=1><P>0</FONT></TD>
+</TR>
+<TR><TD WIDTH="19%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">255.255.192.0</FONT></TD>
+<TD WIDTH="48%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">11111111.11111111.11000000.00000000</FONT></TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">2</FONT></TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<FONT SIZE=1><P>2</FONT></TD>
+<TD WIDTH="12%" VALIGN="TOP">
+<FONT SIZE=1><P>16382</FONT></TD>
+</TR>
+<TR><TD WIDTH="19%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">255.255.224.0</FONT></TD>
+<TD WIDTH="48%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">11111111.11111111.11100000.00000000</FONT></TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">3</FONT></TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<FONT SIZE=1><P>6</FONT></TD>
+<TD WIDTH="12%" VALIGN="TOP">
+<FONT SIZE=1><P>8190</FONT></TD>
+</TR>
+<TR><TD WIDTH="19%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">255.255.240.0</FONT></TD>
+<TD WIDTH="48%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">11111111.11111111.11110000.00000000</FONT></TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">4</FONT></TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<FONT SIZE=1><P>14</FONT></TD>
+<TD WIDTH="12%" VALIGN="TOP">
+<FONT SIZE=1><P>4094</FONT></TD>
+</TR>
+<TR><TD WIDTH="19%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">255.255.248.0</FONT></TD>
+<TD WIDTH="48%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">11111111.11111111.11111000.00000000</FONT></TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">5</FONT></TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<FONT SIZE=1><P>30</FONT></TD>
+<TD WIDTH="12%" VALIGN="TOP">
+<FONT SIZE=1><P>2046</FONT></TD>
+</TR>
+<TR><TD WIDTH="19%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">255.255.252.0</FONT></TD>
+<TD WIDTH="48%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">11111111.11111111.11111100.00000000</FONT></TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">6</FONT></TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<FONT SIZE=1><P>62</FONT></TD>
+<TD WIDTH="12%" VALIGN="TOP">
+<FONT SIZE=1><P>1022</FONT></TD>
+</TR>
+<TR><TD WIDTH="19%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">255.255.254.0</FONT></TD>
+<TD WIDTH="48%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">11111111.11111111.11111110.00000000</FONT></TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">7</FONT></TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<FONT SIZE=1><P>126</FONT></TD>
+<TD WIDTH="12%" VALIGN="TOP">
+<FONT SIZE=1><P>510</FONT></TD>
+</TR>
+<TR><TD WIDTH="19%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">255.255.252.0</FONT></TD>
+<TD WIDTH="48%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">11111111.11111111.11111111.00000000</FONT></TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">8</FONT></TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<FONT SIZE=1><P>254</FONT></TD>
+<TD WIDTH="12%" VALIGN="TOP">
+<FONT SIZE=1><P>254</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT FACE="Times New Roman"><H6>3.3. В окне ввода маски в двоичном изображении отделить в старшем октете слева определенное количество разрядов (в примере - 3 разряда) и установить в выделенных разрядах '1'. Для этого:</H6>
+<H6>- щелкнуть "мышью" в окне двоичного ввода маски;</H6>
+<H6>- используя клавиши управления курсором и клавишу 'BackSpace' удалить '0' в соответствующих разрядах;</H6>
+<H6>- Используя клавишу '1' цифровой клавиатуры установить в разрядах единицы;</H6>
+<H6>-щелкнуть "мышью" вне окна ввода.</H6>
+<H6>В окне "Маска подсети" появится десятичная запись маски. В нашем примере это - </FONT><FONT COLOR="#800000">255.255.224.0.</H6>
+</FONT><FONT FACE="Times New Roman"><H6>4. Заполнение таблицы маршрутизации.</H6>
+<H6>4.1. Щелкнуть по кнопке "Запись". В окне "Номера подсетей" будут отображены номера организуемых подсетей кроме номера подсети, соединяющей маршрутизаторы (в нашем примере это - </FONT><FONT COLOR="#800000">128.1.64.0</FONT>).</H6>
+<FONT FACE="Times New Roman"><H6>4.2. Щелкнуть по кнопке "Таблица маршрутизации". Раскроется таблица маршрутизации. Щелкая "мышью" на соответствующей записи в окне "Номера подсетей", а затем в пустой ячейке таблицы маршрутизации и, таким образом, подключить подсети к портам маршрутизатора (IP - адреса портов маршрутизатора назначаются программой автоматически).</H6>
+<H6>По мере заполнения таблицы маршрутизации записи в окне "Номера подсетей" удаляются</FONT>.</H6>
+<FONT FACE="Times New Roman"><H6>При ошибочном вводе значений в таблицу маршрутизации дважды щелкнуть "мышью" в редактируемой строке таблицы - строка в таблице пропадет и переместится на последнюю строчку окна "Номера подсетей".</H6>
+<H6>При записи значений в таблицу маршрутизации поверх уже существующей строки последняя также удаляется из таблицы и добавляется в окно "Номера подсетей".</H6>
+<H6>Для восстановления содержимого окна "Номера подсетей" щелкнуть по кнопке "запись".</H6>
+<H6>Подключение подсетей заканчивается щелчком по кнопке "Таблица маршрутизации".</H6>
+<H6>Для удобства вырожденная сеть, соединяющая маршрутизаторы М1 и М2 всегда подключена к 1-му порту М2 и имеет номер </FONT><FONT COLOR="#800000">X.X.64.0</FONT><FONT FACE="Times New Roman">, где </FONT><FONT FACE="Times New Roman" COLOR="#800000">Х.Х.0.0</FONT><FONT FACE="Times New Roman"> - номер сети (В нашем примере - </FONT><FONT COLOR="#800000">128.1.0.0</FONT><FONT FACE="Times New Roman">). Порт 2 маршрутизатора М1 имеет IP-адрес </FONT><FONT FACE="Times New Roman" COLOR="#800000">Х.Х.64.2</FONT><FONT FACE="Times New Roman">, порт 1 М2 - </FONT><FONT FACE="Times New Roman" COLOR="#800000">Х.Х.64.1</FONT><FONT FACE="Times New Roman">. Остальным портам М2 автоматически будут присвоены IP-адреса </FONT><FONT COLOR="#800000">Y.Y.Y.1</FONT><FONT FACE="Times New Roman">, где </FONT><FONT COLOR="#800000">Y.Y.Y.0</FONT><FONT FACE="Times New Roman"> - номер подключаемой к порту подсети (например:</H6>
+<H6>подсеть </FONT><FONT COLOR="#800000">128.1.32.0</FONT><FONT FACE="Times New Roman"> подключается к порту 2, IP-адрес порта 2 - </FONT><FONT COLOR="#800000">128.1.32.1</FONT>).</H6>
+<H6><IMG SRC="Image3.gif" WIDTH=548 HEIGHT=399></H6>
+<FONT FACE="Times New Roman" COLOR="#800000"><H6>Заполнение таблицы маршрутизации. Рис.3.</H6>
+</FONT><FONT FACE="Times New Roman"><H6>5. Пошаговая отработка алгоритма работы маршрутизатора М2 при продвижении произвольного IP-пакета.</H6>
+<H6>5.1. В окне "IP - адрес" записать любой IP - адрес или выбрать из предложенных в выпадающем списке.</H6>
+</FONT><FONT FACE="Times New Roman" COLOR="#800000"><H6>Примечание:</H6>
+<H6>При вводе IP - адресов учесть, что в программе недопустимы следующие их значения:</H6>
+</FONT><FONT FACE="Times New Roman" COLOR="#ffff00"><H6>Х.Х.Х.255</H6>
+<H6>Х.Х.Х.0</H6>
+<H6>Х.Х.Х.1 - </FONT><FONT FACE="Times New Roman" COLOR="#800000">(адреса портов маршрутизатора М2),</H6>
+<H6>где Х.Х.Х. номер подсети.</H6>
+<H6>IP - адреса вырожденной сети: </H6>
+</FONT><FONT FACE="Times New Roman" COLOR="#ffff00"><H6>Х.Х.64.1. </H6>
+<H6>Х.Х.64.2.</H6>
+</FONT><FONT FACE="Times New Roman" COLOR="#800000"><H6>Запрещены адреса в диапазоне:</H6>
+</FONT><FONT COLOR="#ffff00"><H6>172.16.0.0 - 172.31.255.255 </FONT><FONT FACE="Times New Roman" COLOR="#800000">(локальные адреса, не обрабатываемые Internet - маршрутизаторами).</H6>
+</FONT><FONT FACE="Times New Roman"><H6>5.2. Мысленно наложить маску на IP - адрес, ориентируясь по записям в окнах двоичного представления адреса и маски.</H6>
+<H6>В описываемом примере введем IP - адрес </FONT><FONT COLOR="#800000">128.1.192.2</FONT>.</H6>
+<FONT FACE="Times New Roman"><H6>Маска подсети </FONT><FONT COLOR="#800000">11111111.11111111.11100000.00000000</H6>
+</FONT><FONT FACE="Times New Roman"><H6>IP - адрес </FONT>        <FONT COLOR="#800000">10000000.00000001.11000000.00000010</H6>
+</FONT><H6><IMG SRC="Image4.gif" WIDTH=553 HEIGHT=414></H6>
+<FONT FACE="Times New Roman" COLOR="#800000"><H6>Выбор номера подсети. Рис.4.</H6>
+</FONT><FONT FACE="Times New Roman"><H6>5.3. В выпадающем окне двоичной записи номеров подсетей выбрать подсеть с совпадающим набором значений в старшем разряде:</H6>
+</FONT><H6>10000000.00000001.11000000.00000000</H6>
+<FONT FACE="Times New Roman"><H6>В окне "Номер подсети" появится номер подсети: </FONT><FONT COLOR="#800000">128.1.192.0</FONT>.</H6>
+<FONT FACE="Times New Roman"><H6>5.4. Вычесть значения полей полученного номера подсети из соответствующих значений IP - адреса - полученное значение будет номером узла, который необходимо записать в окне "Номер узла".</H6>
+<H6>Пример 1: </FONT><FONT FACE="Times New Roman" COLOR="#800000">IP - адрес 128.1.192.2</H6>
+<H6>Номер подсети 128.1.192.0</H6>
+<H6>Номер узла 0.2.</H6>
+</FONT><FONT FACE="Times New Roman"><H6>*Пример 2: </FONT><FONT FACE="Times New Roman" COLOR="#800000">IP - адрес 128.1.197.2</H6>
+<H6>Номер подсети 128.1.192.0</H6>
+<H6>Номер узла 5.2</H6>
+</FONT><FONT FACE="Times New Roman"><H6>5.5. Определить широковещательный адрес подсети - BROADCAST.</H6>
+<H6>Адрес позволяет обращаться ко всем узлам подсети и содержит '1' во всех разрядах номера узла (двоичное представление).</H6>
+<H6>Для определения адреса необходимо:</H6>
+<H6>- записать в окне ввода BROADCAST номер подсети </H6>
+<H6>- в окне двоичной записи BROADCAST записать '1' во всех разрядах полей двоичного номера узла, ориентируясь по маскируемым разрядам маски подсети.</H6>
+<H6>В нашем примере последовательность действий будет выглядеть так:</H6>
+<H6>- в окне 'BROADCAST' записываем </FONT><FONT COLOR="#800000">128.1.192.0</FONT>;</H6>
+<FONT FACE="Times New Roman"><H6>- после щелчка "мыши" вне окна в окне двоичной записи появится -</H6>
+</FONT><FONT COLOR="#800000"><H6>10000000.00000001.1100000.00000000</FONT>; </H6>
+<FONT FACE="Times New Roman"><H6>- используя клавиши управления курсором, 'BackSpace', цифровую клавиатуру, записываем единицы в поле номера узла, получаем -</H6>
+</FONT><FONT COLOR="#800000"><H6>10000000.00000001.11011111.11111111</FONT>;</H6>
+<FONT FACE="Times New Roman"><H6>- после щелчка "мыши" вне окна ввода в окне 'BROADCAST' появится запись широковещательного адреса подсети - </FONT><FONT COLOR="#800000">128.1.223.255</FONT>.</H6>
+<FONT FACE="Times New Roman"><H6>6. Проверка результатов и имитация продвижения IP - пакета в сети.</H6>
+<H6>6.1. Щелкнуть по кнопке "</FONT>Test".</H6>
+<FONT FACE="Times New Roman"><H6>На элементах, составляющих изображение структурной схемы сети появятся кнопки-индикаторы в случае успешного продвижения пакета зеленого, иначе - красного цветов. Щелкнув по кнопке индикатору можно получить краткое сообщение о результате прохождения IP - пакета через данный элемент сети.</H6>
+</FONT><H6><IMG SRC="Image5.gif" WIDTH=552 HEIGHT=402></H6>
+<FONT FACE="Times New Roman" COLOR="#800000"><H6>Результат правильного выполнения задания. Рис.5.</H6>
+</FONT><FONT FACE="Times New Roman"><H6>6.2.Если номер подсети в которую направляется IP-пакет определен правильно, то на схеме напротив соответствующего номера подсети появится сообщение </FONT><FONT COLOR="#800000">CONNECT</FONT>.</H6>
+<FONT FACE="Times New Roman"><H6>Кроме того, о правильности выполнения этапов задания выдаются сообщение в информационном окне.</H6>
+<H6>В случае отрицательного сообщения о правильности выполнения задания повторить соответственно необходимые пункты разделов 3,</FONT> 4, 5.</H6>
+<FONT FACE="Times New Roman"><H6>7. В случае правильного выполнения задания повторить подпункты разделов 5 и 6 для 4 IP - адресов.</H6>
+<H6>8. Ввести IP-адрес не принадлежащий ни одной из подсетей. Для этого либо выбрать IP-адрес, принадлежащий подсетям, которые все еще указаны в окне "Номера подсетей" после заполнения таблицы маршру-тизации, либо указать IP-адрес, принадлежащий другой сети, в нашем</H6>
+<H6>примере это может быть адрес </FONT><FONT COLOR="#800000">190.1.192.2.</FONT><FONT FACE="Times New Roman"> Убедиться, что он не подходит ни для одной из подсетей.</H6>
+<H6>9. Возврат в основное меню производится щелчком "мыши" по кнопке "Выход".</H6>
+</FONT><P><HR></P>
+<H6><A HREF="Help.htm"><FONT FACE="Times New Roman">*Возврат в основное меню*</FONT></A> <A HREF="Help_2.htm"><FONT FACE="Times New Roman">*К Заданию №2*</FONT></A> <A HREF="Help_3.htm"><FONT FACE="Times New Roman">*К Заданию №3*</FONT></A></H6></BODY>
+</HTML>

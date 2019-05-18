@@ -1,0 +1,10 @@
+-- ----------------------------- Get data all tables --------------------------
+
+CONNECT TO LABSV3;
+SELECT * FROM POST;
+SELECT * FROM EMPLOYEE;
+SELECT * FROM DEPOSIT;
+SELECT * FROM CLIENT;
+SELECT * FROM OPERATION;
+SELECT * FROM TRANSFER;
+CONNECT RESET;

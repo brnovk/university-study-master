@@ -1,0 +1,3 @@
+#define MANIFEST 24
+#define IDR_XPMANIFEST 1
+IDR_XPMANIFEST MANIFEST "xpmanifest.xml"

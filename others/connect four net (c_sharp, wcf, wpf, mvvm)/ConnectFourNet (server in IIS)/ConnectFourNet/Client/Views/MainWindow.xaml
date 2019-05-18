@@ -1,0 +1,28 @@
+﻿<Window x:Class="ConnectNNet.Client.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Left="{Binding Left, Mode=TwoWay}"
+        Top="{Binding Top, Mode=TwoWay}"
+        Height="{Binding Height, Mode=TwoWay}"
+        Width="{Binding Width, Mode=TwoWay}"
+        MinWidth="375"
+        MinHeight="450"
+        WindowState="{Binding State, Mode=TwoWay}"
+        Title ="{Binding Title}" 
+        Icon="..\Resources/TTTIcon.ico"
+        DataContext="{Binding Main, Source={StaticResource Locator}}"
+        >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="188*"/>
+        </Grid.RowDefinitions>
+
+        <ContentControl Content="{Binding CurrentViewModel}" Grid.Row="1"/>
+        <Menu Height="25" VerticalAlignment="Top" Grid.Row="0" IsEnabled="{Binding IsGameStopped}">
+            <MenuItem Header="Старт" Command="{Binding StartGame}"/>
+            <MenuItem Header="Настройки" Command="{Binding ShowSettings}"/>
+            <MenuItem Header="Игра по сети"  IsCheckable="true" IsChecked="{Binding IsInetGame}"/>
+        </Menu>
+    </Grid>
+</Window>

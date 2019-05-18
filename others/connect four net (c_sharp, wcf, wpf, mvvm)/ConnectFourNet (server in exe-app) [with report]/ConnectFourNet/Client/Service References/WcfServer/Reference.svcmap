@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e77ba3fd-3647-4dad-bf79-b48d1149d7c8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:18235/WCFServer.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WCFServer.xsd" MetadataType="Schema" ID="bb63c9f2-f653-4565-9213-7231b47519c2" SourceId="1" SourceUrl="http://localhost:18235/WCFServer.svc?xsd=xsd2" />
+    <MetadataFile FileName="WCFServer.disco" MetadataType="Disco" ID="385b32b3-1267-4e9d-a3be-3d74a00fb094" SourceId="1" SourceUrl="http://localhost:18235/WCFServer.svc?disco" />
+    <MetadataFile FileName="WCFServer1.xsd" MetadataType="Schema" ID="167704f2-a60d-4398-a272-52b8b05e82ce" SourceId="1" SourceUrl="http://localhost:18235/WCFServer.svc?xsd=xsd0" />
+    <MetadataFile FileName="WCFServer2.xsd" MetadataType="Schema" ID="373fc350-c31b-450c-91f5-42aa1f2fb7d8" SourceId="1" SourceUrl="http://localhost:18235/WCFServer.svc?xsd=xsd1" />
+    <MetadataFile FileName="WcfServer.wsdl" MetadataType="Wsdl" ID="3f910be6-440a-4214-9a62-44689ddfb70f" SourceId="1" SourceUrl="http://localhost:18235/WCFServer.svc?wsdl" />
+    <MetadataFile FileName="WCFServer6.xsd" MetadataType="Schema" ID="78c985c2-72d4-4a81-97e4-fdd364cf4012" SourceId="1" SourceUrl="http://localhost:18235/WCFServer.svc?xsd=xsd6" />
+    <MetadataFile FileName="WCFServer3.xsd" MetadataType="Schema" ID="6cd2d9e7-6afa-4c87-8fb0-68bc39c01302" SourceId="1" SourceUrl="http://localhost:18235/WCFServer.svc?xsd=xsd3" />
+    <MetadataFile FileName="WCFServer4.xsd" MetadataType="Schema" ID="a7875b20-924a-47cd-809d-9b2b111a507d" SourceId="1" SourceUrl="http://localhost:18235/WCFServer.svc?xsd=xsd4" />
+    <MetadataFile FileName="WCFServer5.xsd" MetadataType="Schema" ID="39277933-c63e-4bbd-9040-3523a82f0a38" SourceId="1" SourceUrl="http://localhost:18235/WCFServer.svc?xsd=xsd5" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

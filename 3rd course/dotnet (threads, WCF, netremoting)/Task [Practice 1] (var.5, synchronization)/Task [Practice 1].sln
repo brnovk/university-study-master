@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2013 for Windows Desktop
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin1", "Plugin1\Plugin1.csproj", "{935CF844-4CA6-4190-915F-74542660226B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin2", "Plugin2\Plugin2.csproj", "{EBA15EFA-DEB9-4778-A55F-3DF87FF21490}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainApplication", "MainApplication\MainApplication.csproj", "{DCFB3C73-566D-4FF3-9F8A-7E16D711B507}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{935CF844-4CA6-4190-915F-74542660226B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{935CF844-4CA6-4190-915F-74542660226B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{935CF844-4CA6-4190-915F-74542660226B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{935CF844-4CA6-4190-915F-74542660226B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBA15EFA-DEB9-4778-A55F-3DF87FF21490}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBA15EFA-DEB9-4778-A55F-3DF87FF21490}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBA15EFA-DEB9-4778-A55F-3DF87FF21490}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBA15EFA-DEB9-4778-A55F-3DF87FF21490}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCFB3C73-566D-4FF3-9F8A-7E16D711B507}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCFB3C73-566D-4FF3-9F8A-7E16D711B507}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCFB3C73-566D-4FF3-9F8A-7E16D711B507}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCFB3C73-566D-4FF3-9F8A-7E16D711B507}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

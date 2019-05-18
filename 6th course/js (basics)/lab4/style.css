@@ -1,0 +1,177 @@
+.left-offset {
+	float: left;
+}
+
+.right-offset {
+	float: right;
+}
+
+.clearfix:after {
+   content: " ";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+body {
+	margin: 0;
+}
+
+.menu-container {
+	height: 88px;
+	background-color: #293946;
+}
+
+.main-container {
+    margin: 0 auto;
+    width: 912px;
+	
+}
+
+.left-jump {
+	width: 70px;
+	border-right: 1px solid #6E8492;
+	height: 100%;
+	text-align: center;
+	font-size: 50px;
+	font-weight: bold;
+}
+
+.right-jump {
+	width: 70px;
+	border-left: 1px solid #6E8492;
+	height: 100%;
+	text-align: center;
+	font-size: 50px;
+	font-weight: bold;
+}
+
+.right-jump a,
+.left-jump a {
+	display: block;
+	margin: 15px;
+	text-decoration: none;
+}
+
+.right-jump a,
+.right-jump a:visited,
+.right-jump a:active,
+.left-jump a,
+.left-jump a:visited,
+.left-jump a:active {
+	color: #009A28;
+}
+
+.descpiption-block {
+	margin: 1px 5px 0 5px;
+	height: 87px;
+	padding: 0 5px;
+	line-height: 17px;
+	border-right: 1px solid #6E8492;
+	color: #ccc;
+}
+
+.descpiption-block em {
+	color: #D5B970;
+}
+
+.descpiption-block strong {
+	color: #009A28;
+}
+
+.task-block {
+	margin: 1px 5px 0 5px;
+	padding: 0 5px;
+	line-height: 17px;
+	color: #ccc;
+}
+
+
+.tables,
+.tables td,
+.tables th {
+	border: 1px solid #ccc;
+	border-collapse: collapse;
+	padding: 2px 2px 2px 5px;
+	margin: 5px;
+	text-align: right;
+}
+.tables caption {
+	padding: 5px;
+	background-color: #ccc;
+}
+.tables thead {
+	background-color: #ddd;
+}
+
+.tables {
+	width: 600px;
+}
+
+.din-label {
+	margin-left: 5px;
+}
+
+.menu-list {
+	border-bottom: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	list-style: none;
+	padding: 0;
+}
+
+.menu-list li {
+	border-top: 1px solid #ccc;
+	cursor: pointer;
+	padding: 3px 10px;
+}
+
+.menu-list li:hover {
+	background-color: orange;
+}
+
+.menu-list li.active,
+.menu-list li.active:hover {
+	background-color: #3d82ad;
+	cursor: default;
+	color: #ddd;
+}
+
+.visible {
+	display: block;
+}
+
+.invisible {
+	display: none;
+}
+
+
+.form-addind-contract input[type="text"],
+.form-addind-contract input[type="number"],
+.form-addind-contract input[type="date"] {
+	margin: 5px 5px;
+	height: 20px;
+	width: 200px;
+}
+
+.form-addind-contract label {
+	display: inline-block;
+	width: 215px;
+	height: 21px;
+	text-align: right;
+}
+
+.form-addind-contract input[type="submit"],
+.form-input-date input[type="submit"] {
+	margin: 5px 5px;
+	width: 425px;
+	height: 30px;
+}
+
+
+.form-input-date input[type="number"] {
+	margin: 5px 0;
+	height: 20px;
+	width: 185px;
+}

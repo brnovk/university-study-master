@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Предварительное форматирование</title>
+	<meta name="keywords" content="предварительное, форматирование, текст, html">
+	<meta name="description" content="Предварительное форматирование текста средствами html">
+	<!--[if lt IE 9]>
+		<script src="scripts/html5.js"></script>
+		<noscript>
+			<strong>Внимание!</strong>
+			Так как ваш браузер не поддерживает HTML5, некоторые элементы 
+			моделируются с помощью JavaScript. К сожалению, в вашем браузере
+			отключено исполнение JavaScript-сценариев. Пожалуйста, включите
+			поддержку скриптов для этой страницы.
+		</noscript>
+	<![endif]-->
+	<link rel="stylesheet" href="css/style.css">  
+</head>
+<body>
+<div class="page-wrapper">
+
+	<header class="page-header">
+
+		<div class="header-block">
+			<span class="header-text">
+				Контрольная работа по дисциплине:<br>
+			</span><!--header-text-->
+			<span class="header-text">
+				<strong>Разработка web-приложений</strong>
+			</span><!--header-text-->
+		</div><!--header-block-->
+	</header><!--page-header-->
+
+	<div class="page-content-wrapper">
+
+		<main class="main-wrapper">
+
+			<article class="other-article-container">
+
+				<div class="article-block-explanation" >
+					<p class="title">
+						Демонстрация предварительного форматирования теста 
+						средствами html на примере стихотворения. 
+					</p>
+					<p> 
+						В данном примере используются возможности форматирования 
+						при помощи тега &lt;pre&gt;. Почитать подробнее о нём можно 
+						по <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre" 
+						title="Mozilla Developer network">этой</a>,
+						<a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html#the-pre-element" 
+						title="WHATWG HTML Living Standard">этой</a> и 
+						<a href="http://www.w3.org/TR/html5/grouping-content.html#the-pre-element" 
+						title="HTML5 Specification">этой</a> 
+						ссылке.
+					</p>
+				</div><!-- article-block-explanation -->
+
+				<div class="article-title">
+					<h1>К Маше</h1>
+				</div><!--article-title-->
+
+				<section class="article-chapter">
+					<h2><em>(А.С.Пушкин)</em></h2>
+					<h3><span class="period">(1816)</span></h3><br>
+					<pre>
+							
+			Вчера мне Маша приказала
+			В куплеты рифмы набросать
+			И мне в награду обещала
+			Спасибо в прозе написать.
+
+			Спешу исполнить приказанье,
+			Года не смеют погодить:
+			Еще семь лет — и обещанье
+			Ты не исполнишь, может быть.
+
+			Вы чинно, молча, сложа руки,
+			В собраньях будете сидеть
+			И, жертвуя богине cкуки,
+			С воксала в маскерад лететь —
+
+			И уж не вспомните поэта!..
+			О Маша, Маша, поспеши —
+			И за четыре мне куплета
+			Мою награду напиши!
+
+					</pre>
+				</section><!--article-chapter-->
+			</article><!--other-article-container-->
+		</main><!--main-wrapper-->
+
+		<nav class="menu-container">
+
+			<ul class="sidebar-menu">
+				<li>
+					<a href="main-lermontov.html" title="Страница о Лермонтове">
+						Биография Лермонтова
+					</a>
+				</li>
+				<li>
+					<a href="main-pushkin.html" title="Страница о Пушкине">Биография Пушкина</a>
+				</li>
+			</ul><!--sidebar-menu-->
+
+			<div class="menu-wrapper">
+
+				<div class="title-sidebar-menu">
+					Тестовые страницы
+				</div><!--title-sidebar-menu-->
+
+				<ul class="sidebar-menu">
+					<li>
+						<a href="normal-formated.html" 
+							title="Пример текста с обычным форматированием">
+							Обычное форматирование
+						</a>
+					</li>
+					<li class="active">
+						<a href="#" 
+							title="Пример текста с предварительным форматированием">
+							Предварительное форматирование</a>
+					</li>
+					<li>
+						<a href="submit-v1.html" 
+							title="Проверка работы html-форм и JS [Способ 1]">
+							Использование JavaScript [<i>Способ 1</i>]
+						</a>
+					</li>
+					<li>
+						<a href="submit-v2.html" 
+							title="Проверка работы html-форм и JS [Способ 2]">
+							Использование JavaScript [<i>Способ 2</i>]
+						</a>
+					</li>
+				</ul>
+			</div><!--menu-wrapper-->
+
+			<div class="menu-wrapper">
+
+				<div class="title-sidebar-menu">
+					Информация			
+				</div><!--title-sidebar-menu-->
+
+				<ul class="sidebar-menu">
+					<li>
+						<a href="task.html" title="Описание тех. задания на разработку">
+							Описание требований
+						</a>
+					</li>
+					<li><a href="about.html" title="Информация о сайте">О сайте</a></li>
+				</ul>
+			</div><!--menu-wrapper-->
+		</nav><!--menu-container-->
+	</div><!--page-content-wrapper-->
+</div><!--page-wrapper-->
+
+<footer class="page-footer">
+	<div class="footer-block">
+		<address>
+			<span class="title">Developed by:</span><br>
+			<span class="signature">Group:</span> POIT-41<br>
+			<span class="signature">Student:</span> Viktor Baranov<br>
+			<span class="signature">E-mail:</span> 
+				<a href="mailto:some@example.by">some@example.by</a>
+		</address>
+	</div><!--footer-block-->
+</footer><!--page-footer-->
+
+</body>
+</html>

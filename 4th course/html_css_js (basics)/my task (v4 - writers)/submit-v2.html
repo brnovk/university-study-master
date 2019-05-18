@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Тест JS (v2)</title>
+	<meta name="keywords" content="проверка, JavaScript, отправка, получение">
+	<meta name="description" content="Проверка отправки данных html-формы и их получения 
+						средствами JS">
+	<!--[if lt IE 9]>
+		<script src="scripts/html5.js"></script>
+		<noscript>
+			<strong>Внимание!</strong>
+			Так как ваш браузер не поддерживает HTML5, некоторые элементы 
+			моделируются с помощью JavaScript. К сожалению, в вашем браузере
+			отключено исполнение JavaScript-сценариев. Пожалуйста, включите
+			поддержку скриптов для этой страницы.
+		</noscript>
+	<![endif]-->
+	<link rel="stylesheet" href="css/style.css">
+	<script src="scripts/js-send-test-version-2.js"></script>
+</head>
+<body>
+<div class="page-wrapper">
+
+	<header class="page-header">
+
+		<div class="header-block">
+			<span class="header-text">
+				Контрольная работа по дисциплине:<br>
+			</span><!--header-text-->
+			<span class="header-text">
+				<strong>Разработка web-приложений</strong>
+			</span><!--header-text-->
+		</div><!--header-block-->
+	</header><!--page-header-->
+
+	<div class="page-content-wrapper">
+
+		<main class="main-wrapper">
+
+			<article class="other-article-container">
+
+				<div class="article-block-explanation" >
+					<p class="title">
+						Тестирование отправки данных html-формы и их создания 
+						новой страницы средствами JavaScript. 
+					</p>
+					<p> 
+						В данном способе создаётся новая страницы в браузере. При 
+						создании страницы нужные данные извлекаются из html-формы на 
+						этой странице и посдтавляются в соответствующие теги созданной страницы.
+					</p>
+				</div><!-- article-block-explanation -->
+
+				<div class="article-title">
+					<h1>Небольшой опрос</h1>
+				</div><!--article-title-->
+
+				<div class="article-chapter">
+					<form name="mainForm" method="POST" accept-charset="UTF-8">
+						<table>
+						<tbody>
+							<tr>
+								<td class="small-indent">
+									Какое из прочитанных произведений недавно вам понравилось?
+								</td>
+								<td class="small-indent">
+									<input type="text" name="liked" value="" placeholder="Enter liked story">
+								</td>
+							</tr>
+							<tr>
+								<td class="small-indent">
+									Опишите почему вам понравилось именно это произведение?
+								</td>
+								<td>
+									<textarea name="comment">
+									</textarea>
+								</td>
+							</tr>
+							<tr>
+								<td class="small-indent">
+									Выберите в списке русских классиков наиболее интересного вам?
+								</td>
+								<td class="small-indent">
+									<select name="writer">
+										<option id="Пушкин">Пушкин</option>
+										<option id="Лермонтов">Лермонтов</option>
+										<option id="Гоголь">Гоголь</option>
+										<option id="Достоевский">Достоевский</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td class="large-indent">
+									<input type="submit" onclick="completeTask('mainForm')">
+								</td>
+								<td class="large-indent"><input type="reset"></td>
+							</tr>
+						</tbody>
+						</table>
+					</form>
+				</div><!--article-chapter-->
+			</article><!--other-article-container-->
+		</main><!--main-wrapper-->
+
+		<nav class="menu-container">
+
+			<ul class="sidebar-menu">
+				<li>
+					<a href="main-lermontov.html" title="Страница о Лермонтове">
+						Биография Лермонтова
+					</a>
+				</li>
+				<li>
+					<a href="main-pushkin.html" title="Страница о Пушкине">Биография Пушкина</a>
+				</li>
+			</ul><!--sidebar-menu-->
+
+			<div class="menu-wrapper">
+
+				<div class="title-sidebar-menu">
+					Тестовые страницы
+				</div><!--title-sidebar-menu-->
+
+				<ul class="sidebar-menu">
+					<li>
+						<a href="normal-formated.html" 
+								title="Пример текста с обычным форматированием">
+							Обычное форматирование
+						</a>
+					</li>
+					<li><a href="preformated.html" 
+							title="Пример текста с предварительным форматированием">
+							Предварительное форматирование</a>
+					</li>
+					<li>
+						<a href="submit-v1.html" title="Проверка работы html-форм и JS [Способ 1]">
+							Использование JavaScript [<i>Способ 1</i>]
+						</a>
+					</li>
+					<li class="active">
+						<a href="#" title="Проверка работы html-форм и JS [Способ 2]">
+							Использование JavaScript [<i>Способ 2</i>]
+						</a>
+					</li>
+				</ul>
+			</div><!--menu-wrapper-->
+
+			<div class="menu-wrapper">
+
+				<div class="title-sidebar-menu">
+					Информация			
+				</div><!--title-sidebar-menu-->
+
+				<ul class="sidebar-menu">
+					<li>
+						<a href="task.html" title="Описание тех. задания на разработку">
+							Описание требований
+						</a>
+					</li>
+					<li><a href="about.html" title="Информация о сайте">О сайте</a></li>
+				</ul>
+			</div><!--menu-wrapper-->
+		</nav><!--menu-container-->
+	</div><!--page-content-wrapper-->
+</div><!--page-wrapper-->
+
+<footer class="page-footer">
+	<div class="footer-block">
+		<address>
+			<span class="title">Developed by:</span><br>
+			<span class="signature">Group:</span> POIT-41<br>
+			<span class="signature">Student:</span> Viktor Baranov<br>
+			<span class="signature">E-mail:</span> 
+				<a href="mailto:some@example.by">some@example.by</a>
+		</address>
+	</div><!--footer-block-->
+</footer><!--page-footer-->
+
+</body>
+</html>

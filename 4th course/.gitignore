@@ -1,0 +1,50 @@
+# wxDev-C++ 7.4 temp/unnecessary files #
+*.exe
+*.win
+*.layout
+*.o
+*.~*
+[Oo]bjects/
+[Oo]utput/
+
+# VS2013 temp/unnecessary files #
+*.exe
+*.suo
+*.~*
+[Bb]in/
+[Oo]bj/
+
+# MS Office temp files #
+~*.doc*
+
+# Java application temp/unnecessary files #
+*.class
+runnable_jar/
+build_war/
+classes/
+
+# IDEA - files/catalogs of project #
+idea/
+out/
+*.iml
+
+# Netbeans - files/catalogs of project #
+build/
+conf/
+dist/
+nbproject/
+lib/CopyLibs/
+lib/javaee-endorsed-api-6.0/
+lib/nblibraries.properties
+build.xml
+
+# Eclipse - files/catalogs of project #
+.metadata/
+.recommenders/
+.settings/
+build/
+RemoteSystemsTempFiles/
+Servers/
+bin/
+.classpath
+.project

@@ -1,0 +1,25 @@
+What is LiveReload?
+
+LiveReload is a tool for web developers and designers. See livereload.com for more info.
+
+To use LiveReload, you need a client (this script) in your browser and a server running on your development machine.
+
+This repository (livereload.js) implements the client side of the protocol. The client connects to a LiveReload server via web sockets and listens for incoming change notifications. When a CSS or an image file is modified, it is live-refreshed without reloading the page. When any other file is modified, the page is reloaded.
+
+The server notifies the client whenever a change is made. Available servers are:
+
+LiveReload app for Mac
+rack-livereload
+guard-livereload
+grunt-contrib-watch
+more available on Google :-)
+you can even write your own; refer to the LiveReload protocol
+If you are a web developer looking to use LiveReload, you should refer to your LiveReload server/app/tool's documentation, rather that this repository. You should use the copy of livereload.js script bundled with your server, because it's guaranteed to be compatible, and may be customized for that server.
+
+Most LiveReload server vendors will serve livereload.js on the LiveReload port. When your server is running, you can typically access the script at http://0.0.0.0:35729/livereload.js.
+
+Please read on only if you are:
+
+using a server that doesn't document the usage of livereload.js
+interested in hacking on livereload.js or want to understand it better
+developing a LiveReload server

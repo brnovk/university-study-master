@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Subtask1 Console", "Subtask1 Console\Subtask1 Console.csproj", "{92BEE06D-8B71-4F10-9D19-3B439F06DB9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Subtask2 File", "Subtask2 File\Subtask2 File.csproj", "{622E0B88-6DE3-4F5A-9DB9-A0459F32F1F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Subtask3 WPF", "Subtask3 WPF\Subtask3 WPF.csproj", "{937DB939-5C8C-4A56-83CC-D80AD535A231}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92BEE06D-8B71-4F10-9D19-3B439F06DB9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92BEE06D-8B71-4F10-9D19-3B439F06DB9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92BEE06D-8B71-4F10-9D19-3B439F06DB9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92BEE06D-8B71-4F10-9D19-3B439F06DB9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{622E0B88-6DE3-4F5A-9DB9-A0459F32F1F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{622E0B88-6DE3-4F5A-9DB9-A0459F32F1F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{622E0B88-6DE3-4F5A-9DB9-A0459F32F1F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{622E0B88-6DE3-4F5A-9DB9-A0459F32F1F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{937DB939-5C8C-4A56-83CC-D80AD535A231}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{937DB939-5C8C-4A56-83CC-D80AD535A231}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{937DB939-5C8C-4A56-83CC-D80AD535A231}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{937DB939-5C8C-4A56-83CC-D80AD535A231}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

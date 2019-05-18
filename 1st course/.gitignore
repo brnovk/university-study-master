@@ -1,0 +1,37 @@
+# Borland paskal temp files #
+*.exe
+*.bak
+
+# Delphi temp/unnecessary files #
+*.exe
+*.dll
+*.bpl
+*.bpi
+*.dcp
+*.so
+*.apk
+*.drc
+*.map
+*.dres
+*.rsm
+*.tds
+*.dcu
+*.lib
+*.a
+*.o
+*.ocx
+*.cfg
+*.hpp
+*Resource.rc
+*.local
+*.identcache
+*.projdata
+*.tvsconfig
+*.dsk
+__history/
+__recovery/
+*.~*
+*.stat
+
+# MS Office temp files #
+~*.doc*

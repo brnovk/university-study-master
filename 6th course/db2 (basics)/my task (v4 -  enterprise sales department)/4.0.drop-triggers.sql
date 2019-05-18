@@ -1,0 +1,8 @@
+-- ------------------------- Removing triggers --------------------------------
+
+CONNECT TO LABSV4;
+
+DROP TRIGGER "VIKTOR BARANOV".TRIGGER_DELETE_PRODUCT;
+DROP TRIGGER "VIKTOR BARANOV".TRIGGER_DELETE_BUYER;
+
+CONNECT RESET;

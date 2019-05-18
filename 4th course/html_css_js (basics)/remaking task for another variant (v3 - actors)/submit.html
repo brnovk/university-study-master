@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<title>Тестирование JS</title>
+	<meta name="keywords" content="проверка, JavaScript, отправка, получение" />
+	<meta name="description" content="Проверка отправки данных html-формы и их получения средствами JS" />
+	<link href="css/style.css" rel="stylesheet">
+	<script src="scripts/test-js.js"></script>
+</head>
+
+<body>
+
+<div class="page-wrapper">
+
+	<header class="page-header">
+		<div class="header-block">
+			<span class="header-text">
+				Контрольная работа по дисциплине:<br>
+			</span><!--header-text-->
+			<span class="header-text">
+				<strong>Разработка web-приложений</strong>
+			</span><!--header-text-->
+		</div><!--header-block-->
+	</header><!--page-header-->
+
+	<div class="page-content-wrapper">
+
+		<main class="main-wrapper">
+
+			<article class="other-article-container">
+
+				<div class="article-title">
+					<h1>Опрос</h1>
+				</div><!--article-title-->
+
+				<section class="article-chapter">
+					<form name="mainForm" method="POST" accept-charset="UTF-8">
+						<table>
+						<tbody>
+							<tr>
+								<td class="small-indent">
+									Какой из просмотренных фильмов вам наиболее понравился?
+								</td>
+								<td class="small-indent">
+									<input type="text" name="liked" value="" placeholder="Enter liked film">
+								</td>
+							</tr>
+							<tr>
+								<td class="small-indent">
+									Опишите почему вам понравился этот фильм?
+								</td>
+								<td>
+									<textarea name="comment">
+									</textarea>
+								</td>
+							</tr>
+							<tr>
+								<td class="small-indent">
+									Игра какого из указанных актёров вам больше нравится?
+								</td>
+								<td class="small-indent">
+									<select name="actor">
+										<option id="Шварценнегер">Шварценнегер</option>
+										<option id="Куоллс">Куоллс</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td class="large-indent">
+									<input type="submit" onclick="completeTask('mainForm')">
+								</td>
+								<td class="large-indent"><input type="reset"></td>
+							</tr>
+						</tbody>
+						</table>
+					</form>
+				</section><!--article-chapter-->
+			</article><!--other-article-container-->
+		</main><!--main-wrapper-->
+
+		<aside class="menu-container">
+
+			<div class="sidebar-note">
+
+				<div class="title-sidebar-note">
+					Пояснение
+				</div><!--title-sidebar-note-->
+
+				<div class="content-sidebar-note">
+					При нажатии кнопки отправить запускается скрипт, который создаёт ноую страницу.
+				</div><!--content-sidebar-note-->
+			</div><!--sidebar-note-->
+
+			<div class="menu-wrapper">
+
+				<div class="title-sidebar-menu">
+					Страницы актёров
+				</div><!--title-sidebar-menu-->
+
+				<ul class="sidebar-menu">
+					<li>
+						<a href="main-qualls.html" title="Дональд Джозеф Куоллс">
+							Куоллс
+						</a>
+					</li>
+					<li>
+						<a href="main-schwarzenegger.html" title="Арнольд Алоис Шварценеггер">Шварценеггер</a>
+					</li>
+				</ul>
+			</div><!--menu-wrapper-->
+
+			<div class="menu-wrapper">
+
+				<div class="title-sidebar-menu">
+					Дополнительные страницы			
+				</div><!--title-sidebar-menu-->
+
+				<ul class="sidebar-menu">
+					<li>
+						<a href="preformated.html" 
+							title="Пример использования предварительного форматирования">
+							Предварительное форматирование</a>
+					</li>
+					<li class="active"><a href="#" 
+							title="Проверка работы c html-формами и JS">
+							Использование JavaScript
+						</a>
+					</li>
+					<li><a href="task.html" title="Описание тех. задания на разработку">
+							Описание требований
+						</a>
+					</li>
+				</ul>
+			</div><!--menu-wrapper-->
+		</aside><!--menu-container-->
+	</div><!--page-content-wrapper-->
+</div><!--page-wrapper-->
+
+<footer class="page-footer">
+	<div class="footer-block">
+		<address>
+			<span class="title">Разработано:</span><br>
+			<span class="signature">Группа:</span> ПОИТ-41<br>
+			<span class="signature">Студент:</span> _student_fullname_<br>
+		</address>
+	</div><!--footer-block-->
+</footer><!--page-footer-->
+
+</body>
+</html>

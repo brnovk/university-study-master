@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Created-By: 1.6.0_19 (Sun Microsystems Inc.)
+Main-Class: Runner
+Class-Path: libs/com.mysql.jdbc_5.1.5.jar

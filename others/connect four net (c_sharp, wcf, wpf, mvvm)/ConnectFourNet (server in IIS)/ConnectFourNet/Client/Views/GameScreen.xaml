@@ -1,0 +1,116 @@
+﻿<UserControl x:Class="ConnectNNet.Client.Views.GameScreen"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:models="clr-namespace:ConnectNNet.GameCore.Models;assembly=GameCore"
+             xmlns:models1="clr-namespace:ConnectNNet.GameCore.Models;assembly=GameCore"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="107*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="130"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="130"/>
+            </Grid.ColumnDefinitions>
+
+            <Border CornerRadius="5" Background="{Binding Logic.IsPlayerTurn, Converter={StaticResource BoolToTurnColor}}" 
+                    Grid.Row="0" Grid.Column="0"/>
+            <Border CornerRadius="5" Name="EnemyPanel" 
+                    Background="{Binding Logic.IsEnemyTurn, Converter={StaticResource BoolToTurnColor}}" 
+                    Grid.Row="0" Grid.Column="2"/>
+            <Grid Grid.Column="0" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <Label Content="{Binding Logic.Player.Login}" FontWeight="Bold" Grid.Row="0"/>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0">
+                        <Image.Style>
+                            <Style TargetType="{x:Type Image}">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Logic.Player.Side}" 
+                                                 Value="{x:Static models1:GameBoard+GameSide.Cross}">
+                                        <Setter Property="Source" Value="{StaticResource CrossImage}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Logic.Player.Side}" 
+                                                 Value="{x:Static models1:GameBoard+GameSide.Zero}">
+                                        <Setter Property="Source" Value="{StaticResource ZeroImage}"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Image.Style>
+                    </Image>
+                    <Label Content="{Binding Logic.Player.Score}" HorizontalContentAlignment="Right" 
+                           FontSize="50" FontWeight="Bold" Margin="10,-20,0,-9" Grid.Column="0"  Grid.ColumnSpan="2"/>
+
+                </Grid>
+            </Grid>
+            <Border CornerRadius="5" BorderBrush="SteelBlue" BorderThickness="2" Grid.Row="0" Grid.ColumnSpan="3"
+                    Grid.Column="0" />
+
+            <Button Grid.Column="1" Content="Начать" Command="{Binding Start}" Name="StartButton"
+                    FontWeight="Bold"  FontSize="17" 
+                    Visibility="{Binding Logic.IsStopped, Converter={StaticResource BoolToVisibilityConverter}}"/>
+            <Button Grid.Column="1" Content="Завершить" Command="{Binding End}" Name="EndButton"
+                    Visibility="{Binding Logic.ItsNotOver, Converter={StaticResource BoolToVisibilityConverter}}"
+                    FontWeight="Bold"  FontSize="17"/>
+            <Grid Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <Label Content="{Binding Logic.Enemy.Login}" Name="EnemyLogin" HorizontalContentAlignment="Right" FontWeight="Bold" Grid.Row="0"/>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="{Binding Logic.Enemy.Score}" HorizontalAlignment="Left" FontSize="50" 
+                           FontWeight="Bold" Grid.Column="0" Margin="0,-20,0,-9" Width="120" Grid.ColumnSpan="2"/>
+                    <Image Grid.Column="1">
+                        <Image.Style>
+                            <Style TargetType="{x:Type Image}">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Logic.Enemy.Side}" 
+                                                 Value="{x:Static models1:GameBoard+GameSide.Cross}">
+                                        <Setter Property="Source" Value="{StaticResource CrossImage}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Logic.Enemy.Side}" 
+                                                 Value="{x:Static models1:GameBoard+GameSide.Zero}">
+                                        <Setter Property="Source" Value="{StaticResource ZeroImage}"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Image.Style>
+                    </Image>
+                </Grid>
+            </Grid>
+        </Grid>
+        <Viewbox Grid.Row="1" IsEnabled="{Binding Logic.InProcess}" >
+            <UniformGrid Name="Board" Background="#DDDDDD" IsEnabled="{Binding Logic.IsPlayerTurn}"
+                         Rows="{Binding Logic.Board.Rows}" Columns="{Binding Logic.Board.Columns}"/>
+        </Viewbox>
+
+        <Image Visibility="{Binding Logic.GameOver, Converter={StaticResource BoolToVisibilityConverter}}" 
+               Source="{StaticResource GrayMask}" Grid.Row="1" Stretch="Fill"/>
+        <Label Visibility="{Binding Logic.GameOver, Converter={StaticResource BoolToVisibilityConverter}}" 
+               Name="EndMessage" Grid.Row="1" VerticalAlignment="Center" HorizontalContentAlignment="Center" 
+               FontSize="27" FontWeight="Bold"/>
+        <Button Grid.Row="1" Content="Продолжить" Command="{Binding Continue}" Name="ContinueButton"
+                    FontWeight="Bold"  FontSize="17" Height="50" Width="200"
+                    Visibility="{Binding Logic.GameOver, Converter={StaticResource BoolToVisibilityConverter}}" RenderTransformOrigin="0.507,1.98" Margin="0,170,0,10"/>
+        <Image Grid.Row="1" Name="RBFlag" Visibility="{Binding ReBoard, Converter={StaticResource BoolToVisibilityConverter}}"/>
+        <Image Grid.Row="1" Name="UPFlag" Visibility="{Binding UpBoard, Converter={StaticResource BoolToVisibilityConverter}}"/>
+    </Grid>
+</UserControl>

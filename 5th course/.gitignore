@@ -1,0 +1,46 @@
+
+# Java application temp/unnecessary files #
+*.class
+runnable_jar/
+build_war/
+classes/
+
+# IDEA - files/catalogs of project #
+idea/
+out/
+*.iml
+
+# Netbeans - files/catalogs of project #
+build/
+conf/
+dist/
+nbproject/private/
+lib/CopyLibs/
+lib/javaee-endorsed-api-6.0/
+lib/nblibraries.properties
+
+# Eclipse - files/catalogs of project #
+.metadata/
+.recommenders/
+.settings/
+build/
+RemoteSystemsTempFiles/
+Servers/
+bin/
+.classpath
+.project
+
+# MS Office temp files #
+~*.doc*
+
+# VS13 - files/catalogs of project #
+[Dd]ebug/
+[Rr]elease/
+*.suo
+*.sdf
+*.opensdf
+*.user
+_newEncryptedFile.txt
+_resultingDecryptedFile.txt
+_digitalSignature.dat
+

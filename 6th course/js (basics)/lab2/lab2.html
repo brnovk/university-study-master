@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Лабораторная №2</title>
+	<link rel="stylesheet" href="style.css" media="screen">
+	<script src="script.js" type="text/javascript" charset="utf-8" async defer></script>
+</head>
+<body onload="init(); ">
+	<div class="main-container">
+
+		<div class="menu-container clearfix">
+			<div class="left-jump left-offset">
+				<a href="../lab1.4/lab14.html" title="Переход к лабораторной №1 Часть 4">&lt;</a>
+			</div>
+			<div class="menu-content left-offset">
+				<div class="descpiption-block left-offset">
+					<strong>
+						Лабораторная работа №2
+					</strong><br>
+					<span>
+						<em>Группа:</em> ПОИТ-61
+					</span><br>
+					<span>
+						<em>Вариант:</em> 4
+					</span><br>
+					<span>
+						<em>ФИО:</em> Баранов В.Ф.
+					</span>
+				</div>
+				<div class="task-block right-offset">
+					Создать японский кроссводр (англоязычное название <em>Nonogram</em>).
+					Реализовать<br>функции проверки результата и предварительного просмотра рисунка.
+				</div>
+			</div>
+			<div class="right-jump right-offset">
+				<a href="../lab3/lab3.html" title="Переход к лабораторной №3">&gt;</a>
+			</div>
+		</div>
+
+		<div class="tablesContainer">
+
+			<div class="clearfix">
+				<form id="formId" class="right-offset" name="actionForm" action="tst();" method="post">
+					<div class="left-offset">
+						<input type="button" class="actionButton" name="showAnswer" value="Показать ответ" onmousedown="showAnswerBlock();" onmouseup="showMainBlock();">
+					</div>
+					<div class="left-offset">
+						<input type="button" class="actionButton" name="clear" value="Очистить" 
+						onmousedown="clearBlock();">
+					</div>
+					<div class="left-offset">
+						<input type="button" class="actionButton" name="verification" value="Проверка" onclick="verificationBlock();">
+					</div>
+				</form>
+				<div class="question-block right-offset">
+					Объектно-ориентированный язык, разработанный компанией Sun Microsystems.
+				</div>
+			</div>
+
+			<div class="clearfix">
+				<div id="topTableContainer" class="right-offset table-wrapper">
+				</div>
+			</div>
+
+			<div class="clearfix">
+				<div id="leftTableContainer" class="left-offset table-wrapper">
+				</div>
+				<div id="gameTableContainerVisible" class="left-offset table-wrapper visible">
+				</div>
+				<div id="gameTableContainerInvisible" class="left-offset table-wrapper invisible">
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

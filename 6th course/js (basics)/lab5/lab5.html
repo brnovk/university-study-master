@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Лабораторная №5</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="script.js" type="text/javascript" charset="utf-8" async defer>
+	</script>
+</head>
+<body onload="ininialize();">
+
+	<div class="main-container">
+		<div class="menu-container clearfix">
+			<div class="left-jump left-offset">
+				<a href="../lab4/lab4.html" title="Переход к лабораторной №4">&lt;</a>
+			</div>
+			<div class="menu-content left-offset">
+				<div class="descpiption-block left-offset">
+					<strong>
+						Лабораторная работа №5
+					</strong><br>
+					<span>
+						<em>Группа:</em> ПОИТ-61
+					</span><br>
+					<span>
+						<em>Вариант:</em> 4
+					</span><br>
+					<span>
+						<em>ФИО:</em> Баранов В.Ф.
+					</span>
+				</div>
+				<div class="task-block right-offset">
+					БД содержит сведения о сдаче лабораторных. Структура записи: Ф.И.О. <br>
+					студента, группа, лаб. 1, лаб. 2, лаб. 3. Если работа сдана то в графу<br>
+					данной лабораторной работы заносится "1", нет - "0". <br> 
+					Сделать меню, включающего пункты <strong>просмотр</strong>, 
+					<strong>обработка</strong>, <strong>добавление</strong>,<br>
+					<strong>сортировка</strong>, <strong>поиск</strong>.
+				</div>
+			</div>
+			<div class="right-jump right-offset">
+			</div>
+		</div>
+
+		<ul class="menu-list">
+			<li id="menuIdView" onclick="view();" class="active">Просмотр</li>
+			<li id="menuIdAdd" onclick="add();">Добавление</li>
+			<li id="menuIdChange" onclick="change();">Изменение</li>
+			<li id="menuIdDelete" onclick="deleteL();">Удаление</li>
+			<li id="menuIdSearch" onclick="search();">Поиск</li>
+			<li id="menuIdSort" onclick="sort();">Сортировка</li>
+			<li id="menuIdDoTask" onclick="doTask();">
+				Выборка списка студентов, сдавших все лабораторные
+			</li>
+		</ul><!-- menu-list -->
+
+		<div id="id-block-view" class="visible">
+			<h3 class="din-label">
+				Список всех студентов
+			</h3>
+		</div>
+
+		<div id="id-block-add" class="invisible">
+			<h3 class="din-label">
+				Добавить запись в список
+			</h3>
+			<form class="form-add-node" method="post" 
+					onsubmit="return performSubmitAdd();" accept-charset="utf-8">
+			    
+			    <label for="idFirstLastNameInAddForm">
+			    	ФИО Студента:
+			    </label>
+			    <input id="idFirstLastNameInAddForm" 
+			    		type="text" 
+			    		required="" 
+			    		placeholder="ФИО Студента" 
+			    		value="" 
+			    		name="firstLastName"></input><br>
+
+			    <label for="idGroupInAddForm">
+			    	Группа:
+			    </label>
+			    <input id="idGroupInAddForm" 
+			    		type="text" 
+			    		required="" 
+			    		placeholder="Группа" 
+			    		value="" 
+			    		name="group"></input><br>
+
+			    <label for="idLab1InAddForm">
+			    	Лаб.№1 (1-сдал, 0-не сдал):
+			    </label>
+			    <input id="idLab1InAddForm"
+			    		type="number" 
+			    		required="" 
+			    		placeholder="(1-сдал, 0-не сдал)" 
+			    		value="" 
+			    		max="1" 
+			    		min="0" 
+			    		name="lab1"></input><br>
+
+			    <label for="idLab2InAddForm">
+			    	Лаб.№2 (1-сдал, 0-не сдал):
+			    </label>
+			    <input id="idLab2InAddForm"
+			    		type="number" 
+			    		required="" 
+			    		placeholder="(1-сдал, 0-не сдал)" 
+			    		value="" 
+			    		max="1" 
+			    		min="0" 
+			    		name="lab2"></input><br>
+
+			    <label for="idLab3InAddForm">
+			    	Лаб.№3 (1-сдал, 0-не сдал):
+			    </label>
+			    <input id="idLab3InAddForm"
+			    		type="number" 
+			    		required="" 
+			    		placeholder="(1-сдал, 0-не сдал)" 
+			    		value="" 
+			    		max="1" 
+			    		min="0" 
+			    		name="lab3"></input><br>
+			    <input type="submit" value="Отправить" name="submitButton"></input>
+			</form> <!--form-add-node -->
+		</div>
+
+		<div id="id-block-select-for-change" class="invisible">
+
+			<h3 class="din-label">
+				Выберите запись для редактирования 
+			</h3>
+		</div>
+
+		<div id="id-block-change" class="invisible">
+			<h3 class="din-label">
+				Редактирование записи 
+			</h3>
+
+			<form class="form-change-node" method="post" 
+					onsubmit="return performSubmitChange();" accept-charset="utf-8">
+			    
+			    <label for="idFirstLastNameInChangeForm">
+			    	ФИО Студента:
+			    </label>
+			    <input id="idFirstLastNameInChangeForm" 
+			    		type="text" 
+			    		required="" 
+			    		placeholder="ФИО Студента" 
+			    		value="" 
+			    		name="firstLastName"></input><br>
+
+			    <label for="idGroupInChangeForm">
+			    	Группа:
+			    </label>
+			    <input id="idGroupInChangeForm" 
+			    		type="text" 
+			    		required="" 
+			    		placeholder="Группа" 
+			    		value="" 
+			    		name="group"></input><br>
+
+			    <label for="idLab1InChangeForm">
+			    	Лаб.№1 (1-сдал, 0-не сдал):
+			    </label>
+			    <input id="idLab1InChangeForm"
+			    		type="number" 
+			    		required="" 
+			    		placeholder="(1-сдал, 0-не сдал)" 
+			    		value="" 
+			    		max="1" 
+			    		min="0" 
+			    		name="lab1"></input><br>
+
+			    <label for="idLab2InChangeForm">
+			    	Лаб.№2 (1-сдал, 0-не сдал):
+			    </label>
+			    <input id="idLab2InChangeForm"
+			    		type="number" 
+			    		required="" 
+			    		placeholder="(1-сдал, 0-не сдал)" 
+			    		value="" 
+			    		max="1" 
+			    		min="0" 
+			    		name="lab2"></input><br>
+
+			    <label for="idLab3InChangeForm">
+			    	Лаб.№3 (1-сдал, 0-не сдал):
+			    </label>
+			    <input id="idLab3InChangeForm"
+			    		type="number" 
+			    		required="" 
+			    		placeholder="(1-сдал, 0-не сдал)" 
+			    		value="" 
+			    		max="1" 
+			    		min="0" 
+			    		name="lab3"></input><br>
+			    <input type="submit" value="Сохранить" name="submitButton"></input>
+			</form> <!--form-change-node -->
+		</div>
+
+		<div id="id-block-select-for-delete" class="invisible">
+
+			<h3 class="din-label">
+				Выберите запись для удаления 
+			</h3>
+		</div>
+
+		<div id="id-block-select-for-find" class="invisible">
+
+			<h3 class="din-label">
+				Выберите поле для поиска и введите искомое значение
+			</h3>
+
+			<form class="form-find-node" method="post" 
+					onsubmit="return performSubmitQueryFind();" accept-charset="utf-8">
+
+			    <div class="radio-list-field">
+				    <label for="fieldFindId">
+				    	id
+				    </label>
+				    <input id="fieldFindId" 
+				    		type="radio"
+				    		value="0" 
+				    		name="type-field-find"><br>
+			    </div><!-- radio-list-field -->
+
+			    <div class="radio-list-field">
+				    <label for="fieldFindSurname">
+				    	ФИО Студента
+				    </label>
+				    <input id="fieldFindSurname" 
+				    		type="radio"
+				    		value="1" 
+				    		name="type-field-find"
+				    		checked=""><br>
+			    </div><!-- radio-list-field -->
+
+			    <div class="radio-list-field">
+				    <label for="fieldFindGroup">
+				    	Группа
+				    </label>
+				    <input id="fieldFindGroup" 
+				    		type="radio"
+				    		value="2" 
+				    		name="type-field-find"><br>
+			    </div><!-- radio-list-field -->
+
+			    <div class="radio-list-field">
+				    <label for="fieldFindLab1">
+				    	Лабораторная №1
+				    </label>
+				    <input id="fieldFindLab1" 
+				    		type="radio"
+				    		value="3" 
+				    		name="type-field-find"><br>
+			    </div><!-- radio-list-field -->
+
+			    <div class="radio-list-field">
+				    <label for="fieldFindLab2">
+				    	Лабораторная №2
+				    </label>
+				    <input id="fieldFindLab2" 
+				    		type="radio"
+				    		value="4" 
+				    		name="type-field-find"><br>
+			    </div><!-- radio-list-field -->
+
+			    <div class="radio-list-field">
+				    <label for="fieldFindLab3">
+				    	Лабораторная №3
+				    </label>
+				    <input id="fieldFindLab3" 
+				    		type="radio"
+				    		value="5" 
+				    		name="type-field-find"><br>
+			    </div><!-- radio-list-field -->
+
+			    <div class="radio-list-field">
+				    <label for="idValueFindForm">
+				    	Искомое значение:
+				    </label>
+				    <input id="idValueFindForm" 
+				    		type="text" 
+				    		required="" 
+				    		placeholder="Искомое значение" 
+				    		value="" 
+				    		name="value"></input><br>
+			    </div><!-- radio-list-field -->
+
+			    <input type="submit" value="Искать" name="submitButton"></input>
+			</form> <!-- form-find-node -->
+		</div>
+
+		<div id="id-block-exist-result-find" class="invisible">
+			
+			<h3 class="din-label">
+				Результат поиска
+			</h3>
+		</div>
+
+		<div id="id-block-empty-result-find" class="invisible">
+
+			<h3 class="din-label">
+				Результат поиска
+			</h3>
+
+			<p class="din-label">
+				Указанное вами значение отсутствует в списке или не указано поле для поиска.
+			</p>
+		</div>
+
+		<div id="id-block-sort" class="invisible">
+			<h3 class="din-label">
+				Отсортированный по фамилии список студентов
+			</h3>
+		</div>
+
+		<div id="id-block-do-task" class="invisible">
+			<h3 class="din-label">
+				Выборка списка студентов, согласно заданию
+			</h3>
+		</div>
+
+		<div id="id-block-empty-do-task-list" class="invisible">
+
+			<h3 class="din-label">
+				Выборка списка студентов, согласно заданию
+			</h3>
+
+			<p class="din-label">
+				Студентов, сдавших все лабораторные, нет в списке
+			</p>
+		</div>
+
+		<div id="id-block-empty-list" class="invisible">
+
+			<h3 class="din-label">
+				Записи в списке отсутствуют
+			</h3>
+
+			<p class="din-label">
+				Выбраная операция невозможна, так как список пустой.
+			</p>
+		</div>
+	</div><!-- main-container -->
+</body>
+</html>

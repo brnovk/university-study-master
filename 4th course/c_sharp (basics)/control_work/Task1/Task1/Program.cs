@@ -1,0 +1,57 @@
+﻿using System;
+
+namespace Task1
+{
+    /// <summary>
+    /// Реализовать функцию возведения в куб разности двух целых чисел.
+    /// Исходные данные вводятся с клавиатуры.
+    /// </summary>
+    class Program
+    {
+        private const String TOOLTIP_INPUT = "-->";
+        private const String MES1 = "Enter the first integer:";
+        private const String MES2 = "Enter the second integer:";
+        private const String MES3 = "Program will be completed...";
+        private const String FORMAT_RESULT_MSG = "Result of calculation: ({0} - {1})^3 = {2}\n";
+
+        static void Main(string[] args)
+        {
+            try
+            {
+                System.Console.WriteLine(MES1);
+                int firstNumber = getInputNumber();
+
+                System.Console.WriteLine(MES2);
+                int secondNumber = getInputNumber();
+
+                long result = calculated(firstNumber, secondNumber);
+                System.Console.Write(FORMAT_RESULT_MSG, firstNumber, secondNumber, result);
+            }
+            // Ближайший суперкласс для FormatException и OverflowException
+            catch (SystemException ex)
+            {
+                System.Console.WriteLine(ex.Message);
+            }
+            System.Console.WriteLine(MES3);
+            System.Console.ReadKey();
+        }
+
+        private static long calculated(int firstNumber, int secondNumber)
+        {
+            int tmpValue = firstNumber - secondNumber;
+            return (tmpValue * tmpValue * tmpValue);
+        }
+
+        /// <summary>
+        /// Получает введённое пользователем с клавиатуры число.
+        /// Выбрасывает FormatException, если введено не целое число.
+        /// Выбрасывает OverflowException, если введено слишком большое число.
+        /// </summary>
+        private static int getInputNumber()
+        {
+            System.Console.Write(TOOLTIP_INPUT);
+            String rawInputInt = Console.ReadLine();
+            return Int32.Parse(rawInputInt);
+        }
+    }
+}

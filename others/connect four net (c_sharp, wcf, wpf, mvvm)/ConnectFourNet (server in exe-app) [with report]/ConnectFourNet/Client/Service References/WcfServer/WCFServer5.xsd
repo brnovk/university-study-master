@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ConnectNNet.GameCore.Models.Players" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ConnectNNet.GameCore.Models.Players" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:18235/WCFServer.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/ConnectNNet.GameCore.Models" />
+  <xs:complexType name="Player">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Login" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Score" type="xs:int" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ConnectNNet.GameCore.Models" minOccurs="0" name="Side" type="q1:GameBoard.GameSide" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Player" nillable="true" type="tns:Player" />
+</xs:schema>

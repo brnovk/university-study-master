@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Subtask 4</title>
+	<link rel="stylesheet" href="css/app-style.css">
+</head>
+<body>
+	<h1>Calculation of trigonometric functions in degrees and radians<br>
+		with a specified precision.<br>Selection of functions must be via 
+		drop-down list.</h1><hr>
+	<a href="index.jsp" title="To main page">To main</a><br>
+	<form action="Subtask4Controller" method="GET" accept-charset="utf-8">
+		<div>
+			<label for="idNumber">Number:</label>
+			<input type="text" name="number" id="idNumber" 
+				placeholder="Число" value="60.0" required/>
+		</div>
+		<div>
+			<label for="idFunctionType">Function:</label>
+			<select id="idFunctionType" name="functionType">
+				<option value="sin" selected="selected">sin</option>
+				<option value="cos">cos</option>
+				<option value="tan">tan</option>
+			</select>
+		</div>
+		<div>
+			<label for="idАccuracy">Precision (numbers after decimal point):</label>
+			<select id="idАccuracy" name="accuracy">
+				<option value="">&lt;no limit&gt;</option>
+				<option value="15">15</option>
+				<option value="14">14</option>
+				<option value="13">13</option>
+				<option value="12">12</option>
+				<option value="11">11</option>
+				<option value="10">10</option>
+				<option value="9">9</option>
+				<option value="8">8</option>
+				<option value="7">7</option>
+				<option value="6">6</option>
+				<option value="5">5</option>
+				<option value="4">4</option>
+				<option value="3" selected="selected">3</option>
+				<option value="2">2</option>
+				<option value="1">1</option>
+			</select>
+		</div>
+		<div>
+			<input type="submit" value="Submit" />
+		</div>
+	</form>
+</body>
+</html>

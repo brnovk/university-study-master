@@ -1,0 +1,108 @@
+.left-offset {
+	float: left;
+}
+
+.right-offset {
+	float: right;
+}
+
+.clearfix:after {
+   content: " ";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+body {
+	margin: 0;
+}
+
+.menu-container {
+	height: 88px;
+	background-color: #293946;
+}
+
+.main-container {
+    margin: 0 auto;
+    width: 912px;
+	
+}
+
+.left-jump {
+	width: 70px;
+	border-right: 1px solid #6E8492;
+	height: 100%;
+	text-align: center;
+	font-size: 50px;
+	font-weight: bold;
+}
+
+.right-jump {
+	width: 70px;
+	border-left: 1px solid #6E8492;
+	height: 100%;
+	text-align: center;
+	font-size: 50px;
+	font-weight: bold;
+}
+
+.right-jump a,
+.left-jump a {
+	display: block;
+	margin: 15px;
+	text-decoration: none;
+}
+
+.right-jump a,
+.right-jump a:visited,
+.right-jump a:active,
+.left-jump a,
+.left-jump a:visited,
+.left-jump a:active {
+	color: #009A28;
+}
+
+.descpiption-block {
+	margin: 1px 5px 0 5px;
+	height: 87px;
+	padding: 0 5px;
+	line-height: 17px;
+	border-right: 1px solid #6E8492;
+	color: #ccc;
+}
+
+.descpiption-block em {
+	color: #D5B970;
+}
+
+.descpiption-block strong {
+	color: #009A28;
+}
+
+.task-block {
+	margin: 1px 5px 0 5px;
+	padding: 0 5px;
+	line-height: 17px;
+	color: #ccc;
+}
+
+/**
+ * Абсолютное позиционирование div с именем.
+ */
+#idNameBlock { 
+	position:absolute;
+	text-shadow: 1px 1px 2px black, 0 0 1em yellow; /* Параметры тени */
+    color: white; /* Белый цвет текста */
+    font-size: 2em; /* Размер надписи */
+
+
+    /* Для IE меньше 10-го */
+    filter: Shadow(Color=#666666, Direction=45, Strength=4);
+}
+
+.center-block-description {
+	margin: 0 auto; 
+	width: 500px;
+	text-align: center;
+}

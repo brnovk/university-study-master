@@ -1,0 +1,630 @@
+﻿/* --------------------------Eric Meyer's CSS Reset------------------------ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* End of Eric Meyer's CSS Reset */
+html {
+	height: 100%;
+}
+article, aside, details, figcaption, figure, footer, header, 
+	hgroup, main, nav, section, summary {
+	display: block;
+}
+body {
+	font: 12px/18px Arial, sans-serif;
+	width: 100%;
+	height: 100%;
+}
+
+/* --------------------------Eric Meyer's CSS Reset End-------------------- */
+
+
+/* ---------------------------float and clearfix--------------------------- */
+
+.float-left {
+	float: left;
+}
+
+.float-rigth {
+	float: right;
+}
+
+.clearfix:before,
+.clearfix:after {
+   content: "";
+   display: table;
+}
+
+.clearfix:after {
+   clear: both;
+}
+
+.clearfix {
+   zoom: 1;
+}
+
+/* ----------------------------float and clearfix End---------------------- */
+
+.page-wrapper {
+	width: 940px;
+	margin: 0 auto;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+}
+
+.page-header {
+	height: 100px;
+	background: #333333;
+	color: #ECECEC;
+}
+
+.page-main {
+	padding: 0;
+}
+
+.logo-index-header-page {
+	font-size: 30px;
+	margin: 36px;
+}
+
+.description-header-page {
+	font-size: 17px;
+	margin: 5px 20px;
+	line-height: 22px;
+}
+
+.description-header-page strong {
+	color: #00ADEF;
+}
+
+.header-right-link a:hover,
+.header-right-link a:visited,
+.header-right-link a:link,
+.header-right-link a:active,
+.header-left-link a:hover,
+.header-left-link a:visited,
+.header-left-link a:link,
+.header-left-link a:active {
+	text-decoration: none;
+}
+
+.header-left-link,
+.header-right-link {
+	font-size: 30px;
+	margin: 36px 0;
+}
+
+.header-left-link a,
+.header-right-link a {
+	color: #E5FFE3;
+	padding: 36px 20px;
+}
+
+.header-left-link a {
+	border-right: 1px solid #ccc;
+}
+
+.header-right-link a {
+	border-left: 1px solid #ccc;
+}
+
+.page-title {
+	font-size: 30px;
+	margin: 30px 0 10px;
+	text-align: center;
+	font-weight: bold;
+	color: #2E2E2E;
+}
+
+.task-title-theme,
+.task-text {
+	font-size: 15px;
+	margin: 10px 40px;
+}
+
+.task-list {
+	font-size: 15px;
+	margin: 10px 56px;
+}
+
+.task-list strong {
+	font-weight: bold;
+}
+
+.page-line-delimeter {
+	border: 0; 
+	border-bottom: 1px dashed #ccc; 
+	background: #999;
+	width: 864px;
+}
+
+.page-description-column-wrapper,
+.page-lab-link-column-wrapper,
+.page-lab-link-column-wrapper-subtask1,
+.page-lab-link-column-wrapper-subtask23 {
+	display: table;
+	margin: 0 auto;
+}
+
+.page-description-column-wrapper h2,
+.page-lab-link-column-wrapper h2,
+.page-lab-link-column-wrapper-subtask1 h2 {
+	font-size: 25px;
+	margin: 20px 30px 25px;
+	text-align: center;
+}
+
+.page-description-column-wrapper li {
+	list-style: none;
+}
+
+.page-description-column-wrapper li,
+.page-lab-link-column-wrapper .lab-link-column li {
+	font-size: 20px;
+	margin: 5px 30px;
+	text-align: center;
+}
+
+.page-lab-link-column-wrapper .lab-link-column {
+	background-color: #00ADEF;
+	margin: 10px;
+	color: #E5FFE3;
+	text-align: center;
+	height: 300px;
+}
+
+.page-lab-link-column-wrapper-subtask23 .lab-link-column {
+	margin: 10px;
+	text-align: center;
+	height: 65px;
+}
+
+.page-lab-link-column-wrapper-subtask1 .lab-link-column {
+	background-color: #00ADEF;
+	margin: 10px;
+	color: #E5FFE3;
+	text-align: center;
+	height: 175px;
+}
+
+.page-lab-link-column-wrapper-subtask1 .lab-link-column p {
+	padding: 0 0 10px 0;
+	margin: 0 0 10px 0;
+	font-size: 15px;
+	height: 50px;
+}
+
+.page-lab-link-column-wrapper .lab-link-column ul {
+	padding: 0 0 10px 0;
+	margin: 0 0 10px 0;
+	height: 160px;
+}
+
+.page-lab-link-column-wrapper .lab-link-column li {
+	list-style: square;
+	font-size: 15px;
+	text-align: left;
+}
+
+.page-lab-link-column-wrapper .lab-link-column a,
+.page-lab-link-column-wrapper-subtask1 .lab-link-column a,
+.page-lab-link-column-wrapper-subtask23 .lab-link-column a {
+	font-size: 20px;
+	background-color: #0077A2;
+	color: #E5FFE3;
+	padding: 10px;
+	margin: 10px;
+	border: 2px solid #07688B;
+}
+
+
+.page-lab-link-column-wrapper-subtask23 .lab-link-column a {
+	display: block;
+}
+
+.page-lab-link-column-wrapper .lab-link-column a:hover,
+.page-lab-link-column-wrapper .lab-link-column a:visited,
+.page-lab-link-column-wrapper .lab-link-column a:link,
+.page-lab-link-column-wrapper .lab-link-column a:active,
+.page-lab-link-column-wrapper-subtask1 .lab-link-column a:hover,
+.page-lab-link-column-wrapper-subtask1 .lab-link-column a:visited,
+.page-lab-link-column-wrapper-subtask1 .lab-link-column a:link,
+.page-lab-link-column-wrapper-subtask1 .lab-link-column a:active,
+.page-lab-link-column-wrapper-subtask23 .lab-link-column a:hover,
+.page-lab-link-column-wrapper-subtask23 .lab-link-column a:visited,
+.page-lab-link-column-wrapper-subtask23 .lab-link-column a:link,
+.page-lab-link-column-wrapper-subtask23 .lab-link-column a:active {
+	text-decoration: none;
+}
+
+.invisible-block {
+	display: none;
+}
+.visible-block {
+	display: block;
+}
+
+.task1-form-wrapper {
+	width: 470px;
+	padding: 10px;
+}
+
+.task1-form {
+	padding: 10px;
+	width: 450px;
+	background-color: #00ADEF;
+}
+
+.task1-form strong {
+	font-weight: bold;
+}
+
+.task1-form p {
+	margin: 10px 0 0 10px;
+	color: white;
+}
+
+.task1-form input[type="text"],
+.task1-form input[type="password"],
+.task1-form input[type="email"],
+.task1-form select,
+.task1-form button {
+	border: 1px solid #BBBDBE;
+	padding: 10px 0;
+	outline: medium none;
+	font-family: 8px Arial, sans-serif;
+	border-radius: 0.3125em;
+	width: 100%;
+}
+
+.task1-form select {
+	width: 100px;
+}
+
+.task1-form label {
+    display: block;
+    text-transform: uppercase;
+    color: #eee;
+    padding: 5px 5px 5px 0;
+}
+
+.task1-form input[type=submit],
+.task1-form input[type=reset] {
+	padding:10px 25px;
+	background:#0077A2;
+	color: white;
+	border:0 none;
+	cursor:pointer;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	width: 220px;
+	margin-top: 20px;
+}
+
+.task1-form input[type=submit]:hover,
+.task1-form input[type=reset]:hover {
+	background: #3cb0fd;
+}
+
+.task1-form input[type=checkbox] {
+    /*Аналог display:none для I8 и ниже*/
+	position:absolute;
+	left:-9999px;
+}
+
+ 
+.task1-form input[type=checkbox] + label {
+	background: #3498db;
+	background-image: -webkit-linear-gradient(top, #3498db, #0077A2);
+	background-image: -moz-linear-gradient(top, #3498db, #0077A2);
+	background-image: -ms-linear-gradient(top, #3498db, #0077A2);
+	background-image: -o-linear-gradient(top, #3498db, #0077A2);
+	background-image: linear-gradient(to bottom, #3498db, #0077A2);
+	font-family: Arial;
+	font-size: 14px;
+	padding: 10px 20px 10px 20px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	text-decoration: none;
+	text-transform: lowercase;
+	margin: 27px 2px 5px;
+}
+
+.task1-form input[type=checkbox]:checked + label,
+.task1-form input[type=checkbox]:hover + label:hover {
+	background: #3cb0fd;
+	background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+	text-decoration: none;
+}
+
+.task1-form input[type=checkbox]:hover + label:hover,
+.task1-form input[type=reset]:hover,
+.task1-form button {
+	cursor: pointer;
+}
+
+.task1-form button:hover {
+	background-color: #333;
+	color: #ccc;
+}
+
+.task1-form .entry-checkbox-buttons {
+    float: right;
+}
+
+.task1-form .append-value-block,
+.task1-form input[type=text].append-value-block {
+	margin: 27px 2px 5px;
+	width: 105px;
+}
+
+.task1-form #idDeleteBlock input[type="radio"] {
+	float: left;
+	margin: 5px;
+}
+
+.task1-form #idDeleteBlock label {
+	border-bottom: 1px solid #ccc;
+	margin: 0 5px;
+	padding: 5px;
+}
+
+.task1-form #idDeleteBlock label:hover {
+	cursor: pointer;
+	color: white;
+}
+
+
+.task1-link-version {
+	margin: 20px;
+	float: right;
+	text-decoration: none;
+	font-size: 18px;
+	color: #00ADEF;
+}
+
+.vertical-menu-wrapper {
+	width: 420px;
+	padding: 10px;
+}
+
+.vertical-menu-wrapper .menu-list a {
+	display: inline-block;
+	width: 375px;
+	color: white;
+	text-decoration: none;
+	font-size: 18px;
+	padding: 10px 20px;
+}
+
+.vertical-menu-wrapper .menu-list {
+	border-bottom: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	list-style: none;
+	padding: 0;
+}
+
+.vertical-menu-wrapper .menu-list li {
+	border-top: 1px solid #ccc;
+	cursor: pointer;
+	background-color: #00ADEF;
+}
+
+.vertical-menu-wrapper .menu-list li:hover {
+	background-color: #0077A2;
+}
+
+.vertical-menu-wrapper .menu-list li.active,
+.vertical-menu-wrapper .menu-list li.active a,
+.vertical-menu-wrapper .menu-list li.active:hover {
+	background-color: #333;
+	cursor: default;
+	color: #ECECEC;
+}
+
+.horizontal-menu-wrapper {
+	width: 919px;
+	padding: 10px;
+}
+
+.horizontal-menu-wrapper .menu-list a {
+	display: inline-block;
+	width: 305px;
+	color: white;
+	text-decoration: none;
+	font-size: 18px;
+	padding: 10px 0;
+	text-align: center;
+}
+
+.horizontal-menu-wrapper .menu-list {
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	list-style: none;
+	padding: 0;
+}
+
+.horizontal-menu-wrapper .menu-list li {
+	border-left: 1px solid #ccc;
+	cursor: pointer;
+	background-color: #00ADEF;
+}
+
+.horizontal-menu-wrapper .menu-list li:hover {
+	background-color: #0077A2;
+}
+
+.horizontal-menu-wrapper .menu-list li.active,
+.horizontal-menu-wrapper .menu-list li.active a,
+.horizontal-menu-wrapper .menu-list li.active:hover {
+	background-color: #333;
+	cursor: default;
+	color: #ECECEC;
+}
+
+
+table,
+table td,
+table th {
+	border: 1px solid #ccc;
+	border-collapse: collapse;
+	padding: 5px;
+	margin: 10px;
+	font-size: 17px;
+	text-align: right;
+	color: white;
+	background-color: #00ADEF;
+}
+table caption {
+	padding: 5px;
+	background-color: #333333;
+	color: #ECECEC;
+}
+table thead td {
+	background-color: #0077A2;
+	text-transform: uppercase;
+}
+
+table {
+	width: 98%;
+}
+
+.task3-form-wrapper {
+	background-color: #00ADEF;
+	color: #eee;
+	padding: 10px;
+	margin: 15px 10px 5px;
+	width: 450px;
+}
+
+.task3-form-wrapper strong {
+	font-weight: bold;
+}
+
+.task3-form-wrapper input[type="text"],
+.task3-form-wrapper select {
+	border: 1px solid #BBBDBE;
+	padding: 10px 5px;
+	outline: medium none;
+	font-family: 8px Arial, sans-serif;
+	border-radius: 0.3125em;
+	width: 275px;
+	float: right;
+	box-sizing: border-box;
+	margin-bottom: 5px;
+}
+
+.task3-form-wrapper label {
+	text-transform: uppercase;
+	display: block;
+	width: 160px;
+	float: left;
+	padding: 10px 0;
+	text-align: right;
+}
+
+.task3-form-wrapper input[type="submit"] {
+	margin: 5px 0 0;
+}
+
+.task3-form-wrapper input[type=submit],
+.task3-form-wrapper button {
+	padding: 5px; 
+	background:#0077A2;
+	color: white;
+	border:0 none;
+	cursor:pointer;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	width: 100%;
+	height: 35px;
+}
+
+.task3-form-wrapper input[type=submit]:hover,
+.task3-form-wrapper button:hover {
+	background: #3cb0fd;
+}
+
+.task3-form-wrapper form {
+	margin-bottom: 15px;
+}
+
+
+.task3-form-wrapper .append-form {
+	margin-bottom: 0;
+}
+
+.task3-form-wrapper .append-form div {
+	padding-bottom: 5px;
+}
+
+.append-error-block {
+	background-color: #0077A2;
+	color: white;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 10px;
+	margin: 15px 10px 5px;
+}
+
+.empty-search {
+	font-size: 18px;
+	padding: 10px;
+	margin: 15px 10px 5px;
+}
+
+.empty-search strong {
+	color: #0077A2;
+	font-weight: bold;
+}
+
+.task3-form-wrapper .asterics-mandatory {
+	font-weight: bold;
+	/*color: red;*/
+	font-size: 16px;
+}

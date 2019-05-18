@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/ConnectNNet.Server.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ConnectNNet.Server.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:18235/WCFServer.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://localhost:18235/WCFServer.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ConnectNNet.GameCore" />
+  <xs:complexType name="GameSession">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreatorId" type="ser:guid" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ConnectNNet.GameCore" minOccurs="0" name="GameInstance" nillable="true" type="q1:GameLogic" />
+      <xs:element minOccurs="0" name="State" type="tns:GameState" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GameSession" nillable="true" type="tns:GameSession" />
+  <xs:simpleType name="GameState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Starting" />
+      <xs:enumeration value="Started" />
+      <xs:enumeration value="Closed" />
+      <xs:enumeration value="PlayerATurn" />
+      <xs:enumeration value="PlayerBTurn" />
+      <xs:enumeration value="Tie" />
+      <xs:enumeration value="PlayerAVin" />
+      <xs:enumeration value="PlayerBVin" />
+      <xs:enumeration value="NotUpdated" />
+      <xs:enumeration value="Restart" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="GameState" nillable="true" type="tns:GameState" />
+</xs:schema>
